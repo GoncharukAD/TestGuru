@@ -1,9 +1,5 @@
 class Test < ApplicationRecord
-    def self.sort_category(category)
-        case category
-        when "Backend" then category_id = 2
-        when "Frontend" then category_id = 1
-        end  
-        Test.where("category_id = ?", category_id).order(title: :desc)
+    def self.sort_category(category) 
+        Test.joins("INNER JOIN categories ON tests.category_id = categories.id").where("categories.title = ?", category).order(title: :desc).pluck("tests.title")
     end    
 end
