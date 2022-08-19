@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-  has_many :tests, dependent: :destroy
   has_many :results, dependent: :destroy
   has_one :test, class_name: "Author", foreign_key: "author_id", dependent: :destroy
 
