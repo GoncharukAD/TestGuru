@@ -14,23 +14,23 @@ tests = Test.create!(
   [{title: "HTML", level: 1, category: categories[0], author: users[0]},
   {title: "Rails", level: 3, category: categories[1], author: users[1]}, 
   {title: "Python", level: 3, category: categories[1], author: users[1]}, 
-  {title: "JS", level: 2, category: categories[0]}, author: users[0]]) 
+  {title: "JS", level: 2, category: categories[0], author: users[0]}]) 
 
 questions = Question.create!(
-  [{title: "HTML is a programming language", test: tests[0]}, #HTML это язык программирования
-  {title: "Active Record is an implementation of ORM in Rails", test: tests[1]}, #Active Record является реализацией ORM в Rails
-  {title: "The Python Decorator is some update of Python syntax made for simpler function changes.", test: tests[2]},#Декоратор Python — это некоторое обновление синтаксиса Python, сделанное для более простого изменения функций
-  {title: "The keyword 'new' is used in constructor functions to create a new object (a new instance of the class)", test: tests[3]}]) #Ключевое слово «new» используется в функциях-конструкторах для создания нового объекта (нового экземпляра класса)"
+  [{title: "HTML это язык программирования", test: tests[0]}, 
+  {title: "Active Record является реализацией ORM в Rails", test: tests[1]},
+  {title: "Декоратор Python — это некоторое обновление синтаксиса Python, сделанное для более простого изменения функций", test: tests[2]},
+  {title: "Ключевое слово «new» используется в функциях-конструкторах для создания нового объекта (нового экземпляра класса)", test: tests[3]}]) 
     
 answers = Answer.create!(
-  [{correct: true, question: questions[0]},
-  {correct: false, question: questions[0]},  
-  {correct: true, question: questions[1]}, 
-  {correct: false, question: questions[1]},
-  {correct: true, question: questions[2]},
-  {correct: false, question: questions[2]},
-  {correct: true, question: questions[3]},
-  {correct: false, question: questions[3]}])
+  [{correct: true, title: "Нет",  question: questions[0]},
+  {correct: false, title: "Да",  question: questions[0]},  
+  {correct: true, title: "Да",  question: questions[1]}, 
+  {correct: false, title: "Нет",  question: questions[1]},
+  {correct: true, title: "Да", question: questions[2]},
+  {correct: false, title: "Нет", question: questions[2]},
+  {correct: true, title: "Да", question: questions[3]},
+  {correct: false, title: "Нет", question: questions[3]}])
 
 results = Result.create!(
   [{user: users[0], test: tests[1]},
