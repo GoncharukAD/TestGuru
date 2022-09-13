@@ -6,10 +6,7 @@ class User < ApplicationRecord
   validates :title, presence: true
   validates :email, presence: true
 
-  scope :used_tests, -> (level) {tests.where( level: level)}
-=begin
   def used_tests(level)
     self.tests.where(level: level)
-  end
-=end  
+  end 
 end

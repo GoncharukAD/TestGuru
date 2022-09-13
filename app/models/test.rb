@@ -8,17 +8,15 @@ class Test < ApplicationRecord
 
   validates :title, presence: true, uniqueness: { scope: :level, message: "Может быть только один тест с таким названием и уровнем" }
 
-  validate :validate_level, on: :create
+  validates :level, numericality: { greater_than_or_equal_to: 0 }
 
   scope :easy, -> { where(level: 0..1) } 
   scope :medium, -> { where(level: 2..4) } 
   scope :high, -> { where(level: 5..Float::INFINITY) } 
 
-  scope :tests_category, -> (category_title) {joins(:category).where(categories: { title: category_title }).order(title: :desc).pluck(:title) }
-  
-  private
+  scope :tests_category, -> (category_title) {joins(:category).where(categories: { title: category_title }).order(title: :desc) }
 
-  def validate_level
-    errors.add(:level) if level.to_i < 0
+  def self.array_tests_category(category_title)
+    tests_category(category_title).pluck(:title)
   end  
 end
