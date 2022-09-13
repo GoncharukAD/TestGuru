@@ -3,13 +3,13 @@ class Answer < ApplicationRecord
 
   validates :title, presence: true
 
-  validate :validate_count
+  validate :validate_count on: :create
   
   scope :correct, -> {where( correct: true ) }
 
   private
 
   def validate_count
-    errors.add(:question) if question.answers.count != (1..4)
+    errors.add(:question) if 0 >= question.answers.count <= 4
   end
 end
