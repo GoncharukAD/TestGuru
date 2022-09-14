@@ -5,11 +5,11 @@ class Answer < ApplicationRecord
 
   validate :validate_count on: :create
   
-  scope :correct, -> {where( correct: true ) }
+  scope :correct, -> { where(correct: true) }
 
   private
 
   def validate_count
-    errors.add(:question) if 0 <= question.answers.count && question.answers.count <= 4
+    errors.add(:question) if question.answers.count <= 4
   end
 end
