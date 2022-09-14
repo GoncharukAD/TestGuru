@@ -6,6 +6,4 @@ class Question < ApplicationRecord
   has_many :answers, dependent: :destroy
 
   validates :title, presence: true
-
-  validate :validate_answers
 end
