@@ -1,48 +1,53 @@
+# frozen_string_literal: true
+
 class QuestionsController < ApplicationController
-  
-  before_action :find_question
+  before_action :find_question, only: %i[destroy show]
 
-  rescue from ActiveRecord::RecordNotFound, with: rescue_with_question_not_found
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index 
-    render plain: 'Просмотр всех вопросов' #Возвращает только это,без списка вопросов
-
-    @test = Test.find(params[:test_id])
-    render :json { questions: @test.questions }  
+  def index
+    @questions = Test.find(params[:test_id]).questions
+    respond_to do |format|
+      format.html { render plain: 'Просмотр всех вопросов' } # index.html.erb
+      format.xml  { render xml: @questions }
+      format.json { render json: @questions }
+    end
   end
 
-  def show 
-    render plain: 'Просмотр конкретного вопроса теста'
-    @test = Test.find(params[:test_id])
-    @test.questions.find(params[:id])
-  end  
-  
-  def destroy 
-    render plain: 'Удаление вопроса'
+  def show
+    @question = Test.find(params[:test_id]).questions.find(params[:id])
+    render plain: @question.inspect
+  end
+
+  def destroy
     @question = Question.find(params[:id])
     @question.destroy
+    render plain: 'Вопрос удален'
   end
-  
 
-  def new
-    render plain: 'Создание вопроса'
-    @question = Question.create(
-      title: params[:question][:title]
-      test_id: params[:question][:test_id]
-    )
-  end
-  
+  def new; end
+
   def create
-  end 
-  
+    @question = Question.create(question_params)
+    if question.save!
+      render plain: @question.inspect
+    else
+      new
+    end
+  end
+
   private
+
+  def question_params
+    params.require(:question).permit(:title, :test_id)
+  end
 
   def find_question
     @test = Question.find(params[:test_id])
     @test.questions.find(params[:id])
-  end  
+  end
 
   def rescue_with_question_not_found
-    render plain: 'Вопрос не найден' 
-  end  
+    render plain: 'Вопрос не найден'
+  end
 end
