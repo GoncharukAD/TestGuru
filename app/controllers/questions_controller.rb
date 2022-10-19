@@ -25,7 +25,7 @@ class QuestionsController < ApplicationController
   def create
     @new_question = @test.questions.new(question_params)
     if @new_question.save
-      redirect_to @new_question
+      render action: "show"
     else
       render :new
     end
