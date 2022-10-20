@@ -16,6 +16,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
+    redirect_to test_path(@question.test)
   end
 
   def new 
@@ -25,7 +26,7 @@ class QuestionsController < ApplicationController
   def create
     @new_question = @test.questions.new(question_params)
     if @new_question.save
-      render action: "show"
+      redirect_to @new_question
     else
       render :new
     end
