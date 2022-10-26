@@ -7,7 +7,7 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render plain: @test.questions.inspect
+    @questions = @test.questions
   end
 
   def edit; end
@@ -20,9 +20,7 @@ class QuestionsController < ApplicationController
     end
   end
 
-  def show
-    render plain: @question.inspect
-  end
+  def show; end
 
   def destroy
     @question.destroy
