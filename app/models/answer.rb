@@ -3,7 +3,7 @@ class Answer < ApplicationRecord
 
   validates :title, presence: true
 
-  validate :validate_count on: :create
+  validate :validate_count, on: :create
   
   scope :correct, -> { where(correct: true) }
 
