@@ -6,7 +6,9 @@ class TestsController < ApplicationController
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
-  def index; end
+  def index
+    @tests = Test.all
+  end
 
   def edit; end
 
