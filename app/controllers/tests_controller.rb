@@ -2,33 +2,30 @@
 
 class TestsController < ApplicationController
   before_action :find_test
-  skip_before_action :find_test, only: %i[index new create] 
+  skip_before_action :find_test, only: %i[index new create]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
-  def index
-  end
+  def index; end
 
-  def edit
-  end
-  
+  def edit; end
+
   def update
     if @test.update
       redirect_to @test
     else
       render :edit
-    end  
-  end  
-
-  def show
+    end
   end
+
+  def show; end
 
   def destroy
     @test.destroy
     redirect_to tests_path
   end
 
-  def new 
+  def new
     @test = Test.new
   end
 

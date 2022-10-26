@@ -7,19 +7,18 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render plain: @test.questions.inspect 
+    render plain: @test.questions.inspect
   end
 
-  def edit
-  end
-  
+  def edit; end
+
   def update
     if @question.update
       redirect_to @question
     else
       render :edit
-    end  
-  end  
+    end
+  end
 
   def show
     render plain: @question.inspect
@@ -30,14 +29,14 @@ class QuestionsController < ApplicationController
     redirect_to test_questions_path
   end
 
-  def new 
+  def new
     @question = @test.questions.new
   end
 
   def create
     @new_question = @test.questions.new(question_params)
     if @new_question.save
-       redirect_to @new_question
+      redirect_to @new_question
     else
       render :new
     end

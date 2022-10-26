@@ -1,6 +1,7 @@
-module QuestionsHelper
+# frozen_string_literal: true
 
-  def question_header(@question)
-     @question.test.title
-  end  
+module QuestionsHelper
+  def question_header(question)
+    question.test.title
+  end
 end
