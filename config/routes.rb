@@ -2,6 +2,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   resources :tests  do
-    resources :questions, shallow: true
+    resources :questions, only: [:update, :new, :create, :edit, :destroy, :show], shallow: true
   end  
 end

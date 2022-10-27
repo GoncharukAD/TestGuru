@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  before_action :find_test
-  skip_before_action :find_test, only: %i[index new create]
+  before_action :find_test, only: %i[edit update show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -32,9 +31,9 @@ class TestsController < ApplicationController
   end
 
   def create
-    @new_test = Test.new(question_params)
-    if @new_test.save
-      redirect_to @new_test
+    @test = Test.new(test_params)
+    if @test.save
+      redirect_to @test
     else
       render :new
     end
@@ -51,6 +50,6 @@ class TestsController < ApplicationController
   end
 
   def rescue_with_test_not_found
-    render plain: 'Вопрос не найден'
+    render plain: 'Тест не найден'
   end
 end

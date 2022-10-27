@@ -4,8 +4,13 @@
 </p>
 
 <p>
-  <strong>Level:</strong>
-  <%= @test.level %>
+  <tr><strong>Level:</strong></tr>
+  <th><%= @test.level %></th>
+</p>
+
+<p>
+  <strong>Questions:</strong><br>
+  <%= @test.questions.inspect %>
 </p>
 
 <%= link_to 'Edit', edit_test_path(@test) %>

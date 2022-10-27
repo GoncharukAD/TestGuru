@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module FooterHelper
   def current_year
     Time.current.year
