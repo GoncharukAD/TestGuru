@@ -42,7 +42,10 @@ class TestsController < ApplicationController
   private
 
   def test_params
-    params.require(:test).permit(:title, :level, :category)
+    params
+    .require(:test)
+    .permit(:title, :level, :category_id)
+    .with_defaults(author_id: 1)#ПОТОМ УДАЛИТЬ!
   end
 
   def find_test
