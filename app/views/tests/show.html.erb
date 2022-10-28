@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @test.title %>
+</p>
+
+<p>
+  <tr><strong>Level:</strong></tr>
+  <th><%= @test.level %></th>
+</p>
+
+<p>
+  <strong>Questions:</strong><br>
+  <%= @test.questions.inspect %>
+</p>
+
+<%= link_to 'Edit', edit_test_path(@test) %>
+<%= link_to 'Back', tests_path %>
