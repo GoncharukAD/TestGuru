@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[edit update show destroy]
+  
+  before_action :set_test, only: %i[edit update show destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -48,7 +49,7 @@ class TestsController < ApplicationController
     .with_defaults(author_id: 1)#ПОТОМ УДАЛИТЬ!
   end
 
-  def find_test
+  def set_test
     @test = Test.find(params[:id])
   end
 
