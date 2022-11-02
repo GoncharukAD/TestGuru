@@ -1,17 +1,12 @@
-<p>
-  <strong>Title:</strong>
-  <%= @test.title %>
-</p>
+<h1><%= @test.title %> Test</h1>
 
-<p>
-  <tr><strong>Level:</strong></tr>
-  <th><%= @test.level %></th>
-</p>
+<h2>All Questions</h2>
 
-<p>
-  <strong>Questions:</strong><br>
-  <%= @test.questions.inspect %>
-</p>
+<%= link_to 'New Question', new_test_question_path(@test) %>
+
+<ol>
+  <%= render @test.questions %>
+</ol><br>
 
 <%= link_to 'Edit', edit_test_path(@test) %>
 <%= link_to 'Back', tests_path %>

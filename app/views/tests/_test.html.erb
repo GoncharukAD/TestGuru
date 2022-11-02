@@ -8,5 +8,6 @@
     test_path(test.id), 
     method: :delete, 
     data: { confirm: 'Are you sure?' } %>
-  </td>>                
+  </td>>
+  <td><%= button_to 'Start', start_test_path(test) %></td>                
 <tr>  
