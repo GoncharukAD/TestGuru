@@ -30,7 +30,9 @@ questions = Question.create!(
      title: 'Ключевое слово «new» используется в функциях-конструкторах для создания нового объекта (нового экземпляра класса)', test: tests[3]
    },
    { title: 'Команда в Git для инициилизации репозитория', test: tests[4] },
-   { title: 'Паттерн,описывающий систему ORM в Rails', test: tests[5] }]
+   { title: 'Паттерн,описывающий систему ORM в Rails', test: tests[5] },
+   { title: 'Тег <body>: ', test: tests[0] },
+   { title: 'Интерполяция в Ruby: ', test: tests[1] }]
 )
 
 answers = Answer.create!(
@@ -51,5 +53,9 @@ answers = Answer.create!(
    { correct: false, title: 'Да', question: questions[4] },
    { correct: true, title: 'Active Record', question: questions[5] },
    { correct: false, title: 'Action Controller', question: questions[5] },
-   { correct: false, title: 'Action View', question: questions[5] }]
+   { correct: false, title: 'Action View', question: questions[5] },
+   { correct: true, title: 'содержит основную информацию о документе: метаданные (например, заголовок окна или кодировку), ссылки на скрипты и таблицы стилей.', question: questions[6] },
+   { correct: false, title: 'группирует или оборачивает другие элементы', question: questions[6] },
+   { correct: true, title: '#{}', question: questions[7] },
+   { correct: false, title: "f'{}", question: questions[7]}]
 )

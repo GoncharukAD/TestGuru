@@ -1,11 +1,15 @@
 # frozen_string_literal: true
 
 class TestPassage < ApplicationRecord
+
+  TEST_PASS_RATE = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_validation :before_validation_set_first_question, on: :create
+
 
   def completed?
     current_question.nil?
@@ -19,6 +23,19 @@ class TestPassage < ApplicationRecord
     self.correct_question = next_question
     save!
   end  
+
+  def result
+    (correct_questions.to_f / test.questions.count * 100).to_i
+  end
+
+
+  def passed?
+    result >= TEST_PASS_RATE
+  end
+  
+  def result
+
+      
 
   private
 
