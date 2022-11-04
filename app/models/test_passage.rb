@@ -6,7 +6,7 @@ class TestPassage < ApplicationRecord
 
   belongs_to :user
   belongs_to :test
-  belongs_to :current_question, class_name: 'Question', optional: true
+  belongs_to :current_question, class_name: 'Question',  foreign_key: 'question_id', optional: true
 
   before_validation :before_validation_set_first_question, on: :create
 
@@ -31,11 +31,7 @@ class TestPassage < ApplicationRecord
 
   def passed?
     result >= TEST_PASS_RATE
-  end
-  
-  def result
-
-      
+  end 
 
   private
 

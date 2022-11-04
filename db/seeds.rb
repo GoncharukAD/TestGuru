@@ -8,6 +8,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Test.destroy_all
+User.destroy_all
+Category.destroy_all
+Question.destroy_all
+
 categories = Category.create!([{ title: 'Frontend' }, { title: 'Backend' }, { title: 'Other' }])
 
 users = User.create!([{ name: 'User1', email: 'user1@email.com' }, { name: 'User2', email: 'user2@email.com' },
@@ -54,8 +59,9 @@ answers = Answer.create!(
    { correct: true, title: 'Active Record', question: questions[5] },
    { correct: false, title: 'Action Controller', question: questions[5] },
    { correct: false, title: 'Action View', question: questions[5] },
-   { correct: true, title: 'содержит основную информацию о документе: метаданные (например, заголовок окна или кодировку), ссылки на скрипты и таблицы стилей.', question: questions[6] },
+   { correct: true,
+     title: 'содержит основную информацию о документе: метаданные (например, заголовок окна или кодировку), ссылки на скрипты и таблицы стилей.', question: questions[6] },
    { correct: false, title: 'группирует или оборачивает другие элементы', question: questions[6] },
-   { correct: true, title: '#{}', question: questions[7] },
-   { correct: false, title: "f'{}", question: questions[7]}]
+   { correct: true, title: '', question: questions[7] },
+   { correct: false, title: "f'{}", question: questions[7] }]
 )
