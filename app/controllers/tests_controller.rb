@@ -1,10 +1,8 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-  
   before_action :set_test, only: %i[edit update show destroy start]
   before_action :set_user, only: :start
-
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -31,8 +29,8 @@ class TestsController < ApplicationController
 
   def start
     @user.tests.push(@test)
-    redirect_to @user.test_passage(@test)#Будет возвращать последнюю строчку из results
-  end  
+    redirect_to @user.test_passage(@test) # Будет возвращать последнюю строчку из results
+  end
 
   def new
     @test = Test.new
@@ -51,8 +49,8 @@ class TestsController < ApplicationController
 
   def test_params
     params
-    .require(:test)
-    .permit(:title, :level, :category_id)
+      .require(:test)
+      .permit(:title, :level, :category_id)
   end
 
   def set_test
@@ -60,7 +58,7 @@ class TestsController < ApplicationController
   end
 
   def set_user
-    @user = User.first #Потом User.find(params[:id])
+    @user = User.first # Потом User.find(params[:id])
   end
 
   def rescue_with_test_not_found

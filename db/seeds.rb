@@ -11,7 +11,7 @@
 Test.destroy_all
 User.destroy_all
 Category.destroy_all
-Question.destroy_all
+
 
 categories = Category.create!([{ title: 'Frontend' }, { title: 'Backend' }, { title: 'Other' }])
 
@@ -62,6 +62,6 @@ answers = Answer.create!(
    { correct: true,
      title: 'содержит основную информацию о документе: метаданные (например, заголовок окна или кодировку), ссылки на скрипты и таблицы стилей.', question: questions[6] },
    { correct: false, title: 'группирует или оборачивает другие элементы', question: questions[6] },
-   { correct: true, title: '', question: questions[7] },
+   { correct: true, title: 'fgdfgdfg', question: questions[7] },
    { correct: false, title: "f'{}", question: questions[7] }]
 )

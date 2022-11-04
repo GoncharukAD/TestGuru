@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 class AnswersController < ApplicationController
-  
   before_action :set_answer, only: %i[destroy show edit update]
-  before_action :find_question , only: %i[create new]
+  before_action :find_question, only: %i[create new]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_answer_not_found
 
@@ -46,6 +45,7 @@ class AnswersController < ApplicationController
   def find_question
     @answer = Question.find(params[:question_id])
   end
+
   def set_answer
     @answer = Answer.find(params[:id])
   end
