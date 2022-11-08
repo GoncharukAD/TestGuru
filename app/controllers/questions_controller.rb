@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class QuestionsController < ApplicationController
-  before_action :find_question, only: %i[destroy show edit update]
+  before_action :set_question, only: %i[destroy show edit update]
   before_action :find_test, only: %i[create new]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @question.destroy
-    redirect_to test_questions_path
+    redirect_to @question.test
   end
 
   def new
@@ -42,7 +42,7 @@ class QuestionsController < ApplicationController
     params.require(:question).permit(:title)
   end
 
-  def find_question
+  def set_question
     @question = Question.find(params[:id])
   end
 
