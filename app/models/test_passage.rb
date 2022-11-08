@@ -51,7 +51,7 @@ class TestPassage < ApplicationRecord
     if answer_ids.nil?
       false
     else  
-      correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+      correct_answers.ids.sort == answer_ids.to_a.map(&:to_i).sort
     end
   end 
   
