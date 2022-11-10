@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
-
+  
   before_action :authenticate_user!
   before_action :set_test, only: %i[edit update show destroy start]
 
@@ -29,7 +29,7 @@ class TestsController < ApplicationController
   end
 
   def start
-    @user = User.first
+    @user = User.find_by(user_id: params[:user_id]) #ПРОВЕРИТЬ
     @user.tests.push(@test)
     redirect_to @user.test_passage(@test) # Будет возвращать последнюю строчку из results
   end

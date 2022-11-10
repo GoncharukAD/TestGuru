@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <style>
+        a { 
+          text-decoration: none;
+        }
+    </style> 
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+
     <% if logged_in? %>
-      <p class="nav user">Welcome, <b><%= current_user.name %></b> Guru</p>
+        <p class="nav user">Welcome, <b><%= current_user.name %></b> <a href="/">Guru </a></p>
+        <%= button_to 'Выйти', logout_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Регистрация', signup_path %>
     <% end %>  
 
     <%= yield %>
