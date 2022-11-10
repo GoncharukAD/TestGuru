@@ -7,7 +7,8 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to tests_path, notice: 'Вы вошли в систему'
+      flash[:notice] = 'Вы вошли в систему'
+      redirect_to cookies[:start_page] || root_path
     else
       flash.now[:alert] = 'Are you Guru? Verify your Email and password please'
       render :new  
@@ -16,6 +17,7 @@ class SessionsController < ApplicationController
   
   def destroy
     session.delete(:user_id)
-    redirect_to root_path, notice: 'Вы вышли из аккаунта'
+    flash.now[:notice] = 'Вы вышли из аккаунта'
+    redirect_to root_path
   end  
 end
