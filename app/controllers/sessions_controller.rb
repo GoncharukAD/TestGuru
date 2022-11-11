@@ -1,7 +1,7 @@
-class SessionsController < ApplicationController
+# frozen_string_literal: true
 
-  def new
-  end
+class SessionsController < ApplicationController
+  def new; end
 
   def create
     user = User.find_by(email: params[:email])
@@ -9,15 +9,16 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       flash[:notice] = 'Вы вошли в систему'
       redirect_to cookies[:start_page] || root_path
+      cookies[:start_page] = nil
     else
       flash.now[:alert] = 'Are you Guru? Verify your Email and password please'
-      render :new  
-    end  
-  end 
-  
+      render :new
+    end
+  end
+
   def destroy
     session.delete(:user_id)
     flash.now[:notice] = 'Вы вышли из аккаунта'
     redirect_to root_path
-  end  
+  end
 end

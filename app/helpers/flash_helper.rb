@@ -1,7 +1,7 @@
 module FlashHelper
   def flash_alert
-    if flash[:alert]
-     content_tag :p, flash[:alert], class: 'flash alert'
+    if flash[:type]
+     content_tag :p, flash[:type], class: 'flash alert'
     end
   end
 end  

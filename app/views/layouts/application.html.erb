@@ -18,13 +18,9 @@
   <body>
     <div class="container">
       <%= render 'shared/flash' %>
-    </div>
+    </div>  
 
-
-    <% if logged_in? %>
-        <p class="nav user">Welcome, <b><%= current_user.name || current_user.email %></b> <a href="/">Guru </a></p>
-        <%= button_to 'Выйти', logout_path, method: :delete %>
-    <% end %>  
+    <%= render 'shared/logged_in' %>
 
     <%= yield %>
     <%= render 'shared/footer' %>
