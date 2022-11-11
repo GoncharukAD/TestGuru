@@ -28,9 +28,8 @@ class TestsController < ApplicationController
   end
 
   def start
-    @user = current_user
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test) # Будет возвращать последнюю строчку из results
+    current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test) # Будет возвращать последнюю строчку из results
   end
 
   def new

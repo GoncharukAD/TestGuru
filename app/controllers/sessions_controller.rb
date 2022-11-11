@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       flash[:notice] = 'Вы вошли в систему'
       redirect_to cookies[:start_page] || root_path
-      cookies[:start_page] = nil
+      cookies.delete(:start_page)
     else
       flash.now[:alert] = 'Are you Guru? Verify your Email and password please'
       render :new

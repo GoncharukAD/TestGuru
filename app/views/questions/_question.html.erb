@@ -2,9 +2,9 @@
   <%= question.title %> </td>
   <%= link_to 'Edit', edit_question_path(question), title: 'Изменить вопрос' %>
   <%= link_to 'Show', question_path(question), title: 'Показать вопрос' %>
-  <%= link_to 'Delete', 
-    test_path(question), 
-    method: :delete, 
-    data: { confirm: 'Are you sure?' }, 
-    title: 'Удалить вопрос'%>           
-</li>   
+  <%= link_to 'Delete',
+    test_path(question),
+    method: :delete,
+    data: { confirm: 'Are you sure?' },
+    title: 'Удалить вопрос'%>
+</li>
