@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
 module FlashHelper
-  def flash_type
-    if flash[:alert]
-      content_tag :p, flash[:alert], class: 'flash_alert'
-    else flash[:notice]
-      content_tag :p, flash[:notice], class: 'flash_notice'
-    end
+
+  def flash_class(key)
+    mapping = {
+      'alert' => 'alert-warning',
+      'notice' => 'alert-info',
+    }
+    "alert #{mapping[key]} alert-dismissable"
   end
 end
