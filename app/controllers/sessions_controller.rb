@@ -8,8 +8,7 @@ class SessionsController < ApplicationController
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
       flash[:notice] = 'Вы вошли в систему'
-      redirect_to cookies[:start_page] || root_path
-      cookies.delete(:start_page)
+      redirect_to cookies.delete(:start_page) || root_path #Метод delete возвращает удаленную запись,поэтому мы и редиректим,и удаляем сразу
     else
       flash.now[:alert] = 'Are you Guru? Verify your Email and password please'
       render :new
