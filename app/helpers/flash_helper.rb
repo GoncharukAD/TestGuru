@@ -2,11 +2,6 @@
 
 module FlashHelper
 
-  def flash_class(key)
-    mapping = {
-      'alert' => 'alert-warning',
-      'notice' => 'alert-info',
-    }
-    "alert #{mapping[key]} alert-dismissable"
+  def flash_message(type)
+    content_tag :p, flash[type], class: "flash #{type.to_s}" if flash[type]
   end
-end
