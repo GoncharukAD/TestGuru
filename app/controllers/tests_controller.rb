@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class TestsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_test, only: %i[edit update show destroy start]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
@@ -27,9 +28,8 @@ class TestsController < ApplicationController
   end
 
   def start
-    @user = User.first
-    @user.tests.push(@test)
-    redirect_to @user.test_passage(@test) # Будет возвращать последнюю строчку из results
+    current_user.tests.push(@test)
+    redirect_to current_user.test_passage(@test) # Будет возвращать последнюю строчку из results
   end
 
   def new
@@ -37,7 +37,7 @@ class TestsController < ApplicationController
   end
 
   def create
-    @test = Test.new(test_params)
+    @test = current_user.authored_tests.build(test_params)#build возвращает new у объекта коллекции
     if @test.save
       redirect_to @test
     else
