@@ -1,14 +1,7 @@
 <tr>
   <td><%= test.title %> </td>
   <td><%= test_level(test) %></td>
-  <td><%= link_to 'Edit', edit_test_path(test), title: 'Изменить тест' %></td>
-  <td><%= link_to 'Show', test_path(test), title: 'Показать тест' %></td>
-  <<td>
-    <%= link_to 'Delete', 
-    test_path(test.id), 
-    method: :delete, 
-    data: { confirm: 'Are you sure?' },
-    title: 'Удалить тест' %>
+  <td><%= test.questions.count %></td>
   </td>>
-  <td><%= button_to 'Start', start_test_path(test), title: 'Пройти тест' %></td>                
-<tr>  
+  <td><%= button_to 'Start', start_test_path(test), title: 'Пройти тест' %></td>
+<tr>
