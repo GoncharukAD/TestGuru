@@ -15,6 +15,7 @@ class AnswersController < ApplicationController
     else
       render :edit
     end
+    # @answer.update ? redirect_to @answer : render :edit
   end
 
   def show; end
@@ -35,6 +36,7 @@ class AnswersController < ApplicationController
     else
       render :new
     end
+    # @answer.save ? redirect_to @answer : render :new
   end
 
   private

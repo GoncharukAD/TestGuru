@@ -7,7 +7,7 @@ class User < ApplicationRecord
          :rememberable,
          :validatable
 
-  EMAIL_FORMAT = /\A[a-z\d\w.]+@[a-z\d]+\.[a-z]+\z/i.freeze
+  EMAIL_FORMAT = /\A[a-z\d\w.]+@[a-z\d]+\.[a-z]+\z/i.freeze #Если в Devise уже есть,то убрать
 
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy

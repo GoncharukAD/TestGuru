@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class TestsController < ApplicationController
+class Admin::TestsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_test, only: %i[edit update show destroy start]
 
@@ -18,6 +18,7 @@ class TestsController < ApplicationController
     else
       render :edit
     end
+    # @test.update ? redirect_to @test : render :edit
   end
 
   def show; end
@@ -43,6 +44,7 @@ class TestsController < ApplicationController
     else
       render :new
     end
+    # @test.save ? redirect_to @test : render :new
   end
 
   private
