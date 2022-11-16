@@ -5,16 +5,12 @@ class User < ApplicationRecord
          :registerable,
          :recoverable,
          :rememberable,
-         :validatable
-
-  EMAIL_FORMAT = /\A[a-z\d\w.]+@[a-z\d]+\.[a-z]+\z/i.freeze #Если в Devise уже есть,то убрать
+         :validatable,
+         :authentication_keys => [:first_name, :last_name]
 
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :authored_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
-
-  validates :name, presence: true
-  validates :email, presence: true, uniqueness: true, format: EMAIL_FORMAT
 
   def used_tests(level)
     tests.where(level: level)

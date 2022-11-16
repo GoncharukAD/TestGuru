@@ -17,8 +17,13 @@
 
   <body>
 
-  <%= render 'shared/signed_in' %>
-
+  <%# <%= render 'shared/signed_in' %> %>
+   <% if user_signed_in? %>
+    <p class="nav user">
+      Welcome, <b><%= current_user.first_name && current_user.last_name || current_user.email %></b> <a href="/">Guru </a>
+    <%= button_to 'Выйти',  destroy_user_session_path, method: :delete %>
+    </p>
+  <% end %>
 
   <%= render 'shared/flash' %> %>
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_15_113546) do
+ActiveRecord::Schema.define(version: 2022_11_14_153017) do
 
   create_table "answers", force: :cascade do |t|
     t.boolean "correct", default: false
@@ -59,8 +59,10 @@ ActiveRecord::Schema.define(version: 2022_11_15_113546) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name", limit: 30, null: false
     t.string "email", default: "", null: false
+    t.string "type", default: "User", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "encrypted_password", default: "", null: false
@@ -71,9 +73,6 @@ ActiveRecord::Schema.define(version: 2022_11_15_113546) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
-    t.string "type", default: "User", null: false
-    t.string "first_name"
-    t.string "last_name"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -82,7 +81,7 @@ ActiveRecord::Schema.define(version: 2022_11_15_113546) do
 
   add_foreign_key "answers", "questions"
   add_foreign_key "questions", "tests"
-  add_foreign_key "test_passages", "questions", column: "current_question_id"
+  add_foreign_key "test_passages", "quetions", column: "current_question_id"
   add_foreign_key "test_passages", "tests"
   add_foreign_key "test_passages", "users"
   add_foreign_key "tests", "categories"

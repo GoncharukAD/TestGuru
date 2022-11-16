@@ -15,8 +15,8 @@ Category.destroy_all
 
 categories = Category.create!([{ title: 'Frontend' }, { title: 'Backend' }, { title: 'Other' }])
 
-users = User.create!([{ name: 'User1', email: 'user1@email.com', password_digest: '$2a$10$Za7prnrSthhE90AvB15BNOMl8sf3oL7onBpZ45nH/9skwHfn1EFA' }, { name: 'User2', email: 'user2@email.com', password_digest: '$2a$10$Za7prnrSthhE90AvB15BNOMl8sf3oL7onBpZ45nH/9skwHfn1EFA' },
-                      { name: 'User3', email: 'user3@email.com', password_digest: '$2a$10$Za7prnrSthhE90AvB15BNOMl8sf3oL7onBpZ45nH/9skwHfn1EFA' }])
+users = User.create!([{ email: 'user1@email.com', password: 'iamguru', type: 'User' }, { email: 'user2@email.com', password: 'iamguru', type: 'User' },
+                      { email: 'user3@email.com', password: 'iamguru', type: 'User' }])
 
 tests = Test.create!(
   [{ title: 'HTML', level: 1, category: categories[0], author: users[0] },
