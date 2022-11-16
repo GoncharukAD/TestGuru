@@ -25,6 +25,8 @@ ru:
         unconfirmed_email: Неподтвержденный email
         unlock_token: Токен разблокировки
         updated_at: Дата обновления
+        first_name: Имя
+        last_name: Фамилия
     models:
       user:
         few: Пользователя
