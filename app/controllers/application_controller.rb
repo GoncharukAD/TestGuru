@@ -6,7 +6,9 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[email first_name last_name])
+    devise_parameter_sanitizer.permit(:sign_in, keys: [:email])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :last_name, :first_name, :email])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :last_name, :first_name, :email])
   end
 
   def after_sign_in_path_for(resource)
