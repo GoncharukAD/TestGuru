@@ -1,4 +1,0 @@
- <% if logged_in? %>
-    <p class="nav user">Welcome, <b><%= current_user.name || current_user.email %></b> <a href="/">Guru </a></p>
-    <%= button_to 'Выйти', logout_path, method: :delete %>
-<% end %>
