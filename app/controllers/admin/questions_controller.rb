@@ -10,12 +10,7 @@ module Admin
     def edit; end
 
     def update
-      if @question.update
-        redirect_to @question
-      else
-        render :edit
-      end
-      # @question.update ? redirect_to @question : render :edit
+      @question.update ? redirect_to @question : render :edit
     end
 
     def show; end
@@ -30,13 +25,7 @@ module Admin
     end
 
     def create
-      @question = @test.questions.new(question_params)
-      if @question.save
-        redirect_to @question
-      else
-        render :new
-      end
-      # @question.save ? redirect_to @question : render :new
+      @question.save ? redirect_to @question : render :new
     end
 
     private

@@ -13,12 +13,7 @@ module Admin
     def edit; end
 
     def update
-      if @test.update
-        redirect_to @test
-      else
-        render :edit
-      end
-      # @test.update ? redirect_to @test : render :edit
+      @test.update ? redirect_to @test : render :edit
     end
 
     def show; end
@@ -34,12 +29,7 @@ module Admin
 
     def create
       @test = current_user.authored_tests.build(test_params) # build возвращает new у объекта коллекции
-      if @test.save
-        redirect_to @test
-      else
-        render :new
-      end
-      # @test.save ? redirect_to @test : render :new
+      @test.save ? redirect_to @test : render :new
     end
 
     private
