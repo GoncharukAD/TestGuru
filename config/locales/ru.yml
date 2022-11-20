@@ -11,6 +11,9 @@ ru:
         title: 'Название'
         level: 'Уровень'
         category_id: 'Категория'
+    select:
+      prompt: "Выберите" #Это для категорий
+
 
    shared:
     errors:
@@ -25,11 +28,14 @@ ru:
       header: 'Доступные тесты'
       title: 'Название'
       level:  'Уровень'
+      start: 'Начать тест'
 
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+    show:
+      header: 'Прохождение теста %{title}'
 
 
   admin:
@@ -38,6 +44,12 @@ ru:
           success: 'Тест успешно создан'
         index:
           header: 'Доступные тесты'
+          title: 'Название'
+          level:  'Уровень'
+          actions: 'Possible actions'
+          questions_count: "Questions count"
+        form_inline:
+          submit: "Ok"
 
   test_mailer:
     completed_test:

@@ -35,13 +35,15 @@ en:
   helpers:
     submit:
       test:
-        create: 'Create test'
+        create: 'Create New test'
         update: 'Update test'
     label:
       test:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+    select:
+      prompt: "Please select" #Это для категорий
 
   shared:
     errors:
@@ -52,8 +54,9 @@ en:
   tests:
         index:
           header: 'All tests'
-          title: 'Title'
-          level:  'Level'
+          title: 'Test title'
+          level:  'Difficulty level'
+          start: 'Start test'
 
 
   admin:
@@ -62,10 +65,18 @@ en:
         success: 'Test was successfully created.'
       index:
         header: 'All tests'
+        title: 'Test title'
+        level:  'Difficulty level'
+        actions: 'Possible actions'
+        questions_count: "Questions count"
+      form_inline:
+        submit: "Ok"
 
     test_passages:
     result:
       header: "The %{title} Test was Completed!"
+    show:
+      header: 'Passing test %{title}'
 
   test_mailer:
     completed_test:

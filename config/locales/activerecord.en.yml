@@ -1,14 +1,15 @@
-activerecord:
-  models:
-    user: 'User'
-    test: "Test"
-    result: 'Resul'
-    question: 'Question'
+en:
+  activerecord:
+    models:
+      user: 'User'
+      test: "Test"
+      result: 'Resul'
+      question: 'Question'
 
-  attribures:
-    test:
-    title: "Title"
+    attributes:
+      test:
+        title: "Title"
 
-   errors:
-      messages:
-        blank: "can't be blank"
+    errors:
+        messages:
+          blank: "can't be blank"

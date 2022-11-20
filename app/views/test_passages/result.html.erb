@@ -2,7 +2,7 @@
 
 <% if @test_passage.passed? %>
   <p style="color: green"><%= @test_passage.result %>%</p>
-  <p>Test was succesful!</p>
+  <p><%= t('.success') %></p>
 <% else %>
   <p style="color: red"><%= @test_passage.result %>%</p>
   <p>Test was not succesful!</p>
