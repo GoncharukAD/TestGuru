@@ -20,7 +20,7 @@ module Admin
 
     def destroy
       @test.destroy
-      redirect_to tests_path
+      redirect_to admin_tests_path
     end
 
     def new
@@ -29,7 +29,10 @@ module Admin
 
     def create
       @test = current_user.authored_tests.build(test_params) # build возвращает new у объекта коллекции
-      @test.save ? redirect_to @test : render :new
+      if @test.save
+        redirect_to @test, notice: t('.success')
+      else
+        render :new
     end
 
     private
