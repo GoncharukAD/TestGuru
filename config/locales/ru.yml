@@ -22,8 +22,15 @@ ru:
         many: 'Обнаружено %{count} ошибок'
         one: 'Обнаружена %{count} ошибка'
         others: 'Обнаружено %{count} ошибки'
+    signed_in:
+      welcome: 'Добро пожаловать, %{name}'
+      links:
+        back: 'Назад'
 
   tests:
+    test:
+      links: #Или button,уточнить
+        start: 'Пройти тест'
     index:
       header: 'Доступные тесты'
       title: 'Название'
@@ -34,22 +41,50 @@ ru:
   test_passages:
     result:
       header: 'Тест %{title} успешно завершен!'
+      links:
+        back: 'Назад'
     show:
       header: 'Прохождение теста %{title}'
+      links:
+        back: 'Назад'
+        next: 'Далее'
 
 
   admin:
-      tests:
-        create:
-          success: 'Тест успешно создан'
-        index:
-          header: 'Доступные тесты'
-          title: 'Название'
-          level:  'Уровень'
-          actions: 'Possible actions'
-          questions_count: 'Questions count'
-        form_inline:
-          submit: 'Ok'
+    tests:
+      create:
+        success: 'Тест успешно создан'
+      test:
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+      index:
+        header: 'Доступные тесты'
+        title: 'Название'
+        level:  'Уровень'
+        actions: 'Доступные действия'
+        links:
+          new_test: 'Создать новый тест'
+      form_inline:
+        submit: 'Подтвердить'
+      show:
+        header: '%{title} Тест'
+        questions: 'Все вопросы'
+        links:
+          back: 'Назад'
+          edit: 'Редактировать'
+          new_question: 'Добавить новый вопрос'
+      new:
+        new_test: 'Создать новый тест'
+      edit:
+        edit_test: 'Редактировать %{title} Тест'
+
+    nav:
+      welcome: 'Приветствуем, %{name} Гуру |'
+      links:
+          logout: 'Выйти из системы'
+
+
 
   test_mailer:
     completed_test:

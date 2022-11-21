@@ -50,33 +50,66 @@ en:
       header:
         one: '%{count} error detected'
         others: '%{count} errors detected'
+    signed_in:
+      welcome: 'Welcome, %{name}'
+      links:
+        back: 'Back'
 
   tests:
-        index:
-          header: 'All tests'
-          title: 'Test title'
-          level:  'Difficulty level'
-          start: 'Start test'
+    test:
+      links: #Или button,уточнить
+        start: 'Start Test'
+    index:
+      header: 'All tests'
+      title: 'Test title'
+      level:  'Difficulty level'
+      start: 'Start test'
 
 
   admin:
     tests:
       create:
         success: 'Test was successfully created.'
+      test:
+        links:
+          delete: 'Delete'
+          show: 'Show'
+          edit: 'Edit'
       index:
         header: 'All tests'
         title: 'Test title'
         level:  'Difficulty level'
         actions: 'Possible actions'
-        questions_count: "Questions count"
+        links:
+          new_test: 'Create New test'
       form_inline:
-        submit: "Ok"
+        submit: 'Ok'
+      show:
+        header: '%{title} Test'
+        questions: 'All questions'
+        links:
+          back: 'Back'
+          edit: 'Edit'
+          new_question: 'Add new question'
+      new:
+        new_test: 'Create new test'
+      edit:
+        edit_test: ' Edit %{title} Test'
+    nav:
+      welcome: 'Welcome, %{name} Guru |'
+      links:
+          logout: 'Logout'
 
     test_passages:
     result:
-      header: "The %{title} Test was Completed!"
+      header: 'The %{title} Test was Completed!'
+      links:
+          back: 'Back'
     show:
       header: 'Passing test %{title}'
+      links:
+          back: 'Back'
+          next: 'Next'
 
   test_mailer:
     completed_test:

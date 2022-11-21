@@ -10,7 +10,7 @@ module Admin
     def edit; end
 
     def update
-        @answer.update ? redirect_to @answer : render :edit
+        @answer.update ? (redirect_to @answer) : (render :edit)
     end
 
     def show; end
@@ -26,7 +26,7 @@ module Admin
 
     def create
       @answer = @question.answers.new(question_params)
-      @answer.save ? redirect_to @answer : render :new
+      @answer.save ? (redirect_to @answer) : (render :new)
     end
 
     private
