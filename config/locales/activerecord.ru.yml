@@ -8,6 +8,20 @@ ru:
     attributes:
       test:
         title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        category_id: 'Категория'
+      question:
+        body: Формулировка вопроса
+      answer:
+        body: Вариант ответа
+        correct: Правильность
+      user:
+        first_name: Имя
+        last_name: Фамилия
+        email: Электронная почта
+        password: Пароль
+        password_confirmation: Подтверждение пароля
 
     errors:
       messages:

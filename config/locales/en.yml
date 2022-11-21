@@ -52,29 +52,29 @@ en:
         others: '%{count} errors detected'
     signed_in:
       welcome: 'Welcome, %{name}'
-      links:
-        back: 'Back'
+      back: 'Back'
 
   tests:
     test:
-      links: #Или button,уточнить
-        start: 'Start Test'
+      start: 'Start Test'
     index:
       header: 'All tests'
       title: 'Test title'
       level:  'Difficulty level'
-      start: 'Start test'
+      questions_count: 'Number of questions'
 
 
   admin:
     tests:
-      create:
-        success: 'Test was successfully created.'
+      success_create: 'Test created successfully'
+      success_update: 'Test successfully updated'
+      success_delete: 'Test successfully deleted'
+      not_found: 'Test not found'
       test:
-        links:
-          delete: 'Delete'
-          show: 'Show'
-          edit: 'Edit'
+        delete: 'Delete'
+        show: 'Show'
+        edit: 'Edit'
+        confirm: 'Are you sure?'
       index:
         header: 'All tests'
         title: 'Test title'
@@ -87,30 +87,74 @@ en:
       show:
         header: '%{title} Test'
         questions: 'All questions'
-        links:
-          back: 'Back'
-          edit: 'Edit'
-          new_question: 'Add new question'
+        back: 'Back'
+        edit: 'Edit'
+        new_question: 'Add new question'
       new:
         new_test: 'Create new test'
       edit:
         edit_test: ' Edit %{title} Test'
+
+    answers:
+      success_create: 'Answer created successfully'
+      success_update: 'Answer  successfully updated'
+      success_delete: 'Answer  successfully deleted'
+      not_found: 'Answer not found'
+      answer:
+        delete: 'Delete'
+        show: 'Show'
+        edit: 'Edit'
+        confirm: 'Are you sure?'
+      show:
+        question: 'Question'
+        answer: 'Answer'
+        back: 'Back'
+      new:
+        new_answer: 'Create new answer'
+        show_answer: 'Show answer'
+        back: 'Back'
+      edit:
+        edit_answer: ' Edit answer'
+        back: 'Back'
+
+    questions:
+      success_create: 'Question created successfully'
+      success_update: 'Question successfully updated'
+      success_delete: 'Question  successfully deleted'
+      not_found: 'Question not found'
+      question:
+        delete: 'Delete'
+        show: 'Show'
+        edit: 'Edit'
+        confirm: 'Are you sure?'
+      show:
+        header: 'Question: %{question}'
+        answers_list: 'Answers list'
+        new_answer: 'Add new answer'
+        edit_question: 'Edit question'
+        back: 'Back'
+      new:
+        new_question: 'Create new question'
+        show_question: 'Show question' #Добавить ссылку
+        back: 'Back'
+      edit:
+        edit_question: 'Edit %{question}'
+        back: 'Back'
+
     nav:
+      admin: 'TestGuru Admin Panel'
       welcome: 'Welcome, %{name} Guru |'
-      links:
-          logout: 'Logout'
+      logout: 'Logout'
 
     test_passages:
-    result:
-      header: 'The %{title} Test was Completed!'
-      links:
-          back: 'Back'
-    show:
-      header: 'Passing test %{title}'
-      links:
-          back: 'Back'
-          next: 'Next'
+      result:
+        header: 'The %{title} Test was Completed!'
+        back: 'Back'
+      show:
+        header: 'Passing test %{title}'
+        back: 'Back'
+        next: 'Next'
 
-  test_mailer:
+    test_mailer:
     completed_test:
       subject: 'You just completed the TestGuru test'

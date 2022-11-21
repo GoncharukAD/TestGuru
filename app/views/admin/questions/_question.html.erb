@@ -1,10 +1,9 @@
 <li>
   <%= question.title %> </td>
-  <%= link_to 'Edit', edit_admin_question_path(question), title: 'Изменить вопрос' %>
-  <%= link_to 'Show', admin_question_path(question), title: 'Показать вопрос' %>
-  <%= link_to 'Delete',
+  <%= link_to t('.edit'), edit_admin_question_path(question) %>
+  <%= link_to t('.show'), admin_question_path(question) %>
+  <%= link_to t('.delete'),
     admin_test_path(question),
     method: :delete,
-    data: { confirm: 'Are you sure?' },
-    title: 'Удалить вопрос'%>
+    data: { confirm:  t('.confirm') }%>
 </li>
