@@ -2,8 +2,8 @@ en:
   activerecord:
     models:
       user: 'User'
-      test: "Test"
-      result: 'Resul'
+      test: 'Test'
+      result: 'Result'
       question: 'Question'
 
     attributes:
@@ -11,5 +11,5 @@ en:
         title: "Title"
 
     errors:
-        messages:
-          blank: "can't be blank"
+      messages:
+        blank: "can't be blank"

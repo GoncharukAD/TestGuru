@@ -1,18 +1,18 @@
 ru:
   activerecord:
     models:
-      test: "Тест"
-        result: 'Результат'
-        question: 'Вопрос'
+      test: 'Тест'
+      result: 'Результат'
+      question: 'Вопрос'
 
     attributes:
       test:
-        title: "Название"
+        title: 'Название'
 
     errors:
-        messages:
-          blank: "Не может быть пустым"
-          record_invalid: 'Возникли ошибки: %{errors}'
-          restrict_dependent_destroy:
-            has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
-            has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+      messages:
+        blank: 'Не может быть пустым'
+        record_invalid: 'Возникли ошибки: %{errors}'
+        restrict_dependent_destroy:
+          has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
+          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'

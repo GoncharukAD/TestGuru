@@ -1,5 +1,5 @@
 ru:
-  hello: "Привет,мир"
+  hello: 'Привет, мир'
 
   helpers:
     submit:
@@ -12,16 +12,16 @@ ru:
         level: 'Уровень'
         category_id: 'Категория'
     select:
-      prompt: "Выберите" #Это для категорий
+      prompt: 'Выберите' #Это для категорий
 
 
-   shared:
+  shared:
     errors:
       header:
-        few: Обнаружено %{count} ошибки"
-        many: "Обнаружено %{count} ошибок"
-        one: Обнаружена %{count} ошибка"
-        others: Обнаружено %{count} ошибки"
+        few: 'Обнаружено %{count} ошибки'
+        many: 'Обнаружено %{count} ошибок'
+        one: 'Обнаружена %{count} ошибка'
+        others: 'Обнаружено %{count} ошибки'
 
   tests:
     index:
@@ -33,7 +33,7 @@ ru:
 
   test_passages:
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: 'Тест %{title} успешно завершен!'
     show:
       header: 'Прохождение теста %{title}'
 
@@ -47,9 +47,9 @@ ru:
           title: 'Название'
           level:  'Уровень'
           actions: 'Possible actions'
-          questions_count: "Questions count"
+          questions_count: 'Questions count'
         form_inline:
-          submit: "Ok"
+          submit: 'Ok'
 
   test_mailer:
     completed_test:
