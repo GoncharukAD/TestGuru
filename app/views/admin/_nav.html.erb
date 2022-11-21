@@ -1,8 +1,8 @@
 <nav class="nav nav-admin">
-  <span class="nav nav-admin title">TestGuru Admin Panel</span>
+  <span class="nav nav-admin title"><%= t('.admin') %></span>
   <div class="nav-admin user">
-   Welcome, <b class="nav-admin user-email"><%= current_user.email %></b> Guru |
-   <%= link_to "Logout". destroy_user_session_path, method: delete %>
+    <b><%= t('.welcome', name: current_user.first_name || current_user.email )%></b>
+   <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
   </div>
 </nav>
 <br>

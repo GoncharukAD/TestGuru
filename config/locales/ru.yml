@@ -1,17 +1,141 @@
 ru:
-  activerecord:
-    models:
-      user: Пользователь
-      test: Тест
-      result: Результат
-      question: Вопрос
-      
+  hello: 'Привет, мир'
+
+  helpers:
+    submit:
+      test:
+        create: 'Cоздать тест'
+        update: 'Обновить тест'
+    label:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category_id: 'Категория'
+    select:
+      prompt: 'Выберите'
+
+
+  shared:
     errors:
-      messages:
-        record_invalid: 'Возникли ошибки: %{errors}'
-        restrict_dependent_destroy:
-          has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
-          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+      header:
+        few: 'Обнаружено %{count} ошибки'
+        many: 'Обнаружено %{count} ошибок'
+        one: 'Обнаружена %{count} ошибка'
+        others: 'Обнаружено %{count} ошибки'
+    signed_in:
+      welcome: 'Добро пожаловать, %{name}'
+      back: 'Назад'
+
+  tests:
+    test:
+      start: 'Пройти тест'
+    index:
+      header: 'Доступные тесты'
+      title: 'Название'
+      level:  'Уровень'
+      questions_count: 'Количество вопросов'
+
+
+  test_passages:
+    result:
+      header: 'Тест %{title} успешно завершен!'
+      back: 'Назад'
+    show:
+      header: 'Прохождение теста %{title}'
+      back: 'Назад'
+      next: 'Далее'
+
+
+  admin:
+    success_create: 'Тест успешно создан'
+    success_update: 'Тест успешно обновлен'
+    success_delete: 'Тест успешно удален'
+    not_found: 'Тест не найден'
+    test:
+      delete: 'Удалить'
+      show: 'Показать'
+      edit: 'Редактировать'
+      confirm: 'Вы уверены?'
+    index:
+      header: 'Доступные тесты'
+      title: 'Название'
+      level:  'Уровень'
+      actions: 'Доступные действия'
+      new_test: 'Создать новый тест'
+    show:
+      header: '%{title} Тест'
+      questions: 'Все вопросы'
+      back: 'Назад'
+      edit: 'Редактировать'
+      new_question: 'Добавить новый вопрос'
+    new:
+      new_test: 'Создать новый тест'
+    edit:
+      edit_test: 'Редактировать %{title} Тест'
+
+    answers:
+      success_create: 'Ответ успешно создан'
+      success_update: 'Ответ успешно обновлен'
+      success_delete: 'Ответ успешно удален'
+      not_found: 'Ответ не найден'
+      answer:
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+        confirm: 'Вы уверены?'
+      new:
+        new_answer: 'Создать новый ответ'
+        show_answer: 'Показать ответ'
+        back: 'Назад'
+      edit:
+        edit_answer: 'Изменить ответ'
+        back: 'Назад'
+      show:
+        question: 'Вопрос'
+        answer: 'Ответ'
+        back: 'Назад'
+      new:
+        new_answer: 'Создать новый ответ'
+        show_answer: 'Показать ответ'
+        back: 'Назад'
+      edit:
+        edit_answer: 'Изменить ответ'
+        back: 'Назад'
+
+    questions:
+      success_create: 'Вопрос успешно создан'
+      success_update: 'Вопрос успешно обновлен'
+      success_delete: 'Вопрос успешно удален'
+      not_found: 'Вопрос не найден'
+      question:
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+        confirm: 'Вы уверены?'
+      show:
+        header: 'Вопрос: %{question}'
+        answers_list: 'Список ответов'
+        new_answer: 'Добавить новый ответ'
+        edit_question: 'Изменить вопрос'
+        back: 'Назад'
+      new:
+        new_question: 'Создать новый вопрос'
+        show_question: 'Показать вопрос' #Добавить ссылку
+        back: 'Назад'
+      edit:
+        edit_question: 'Изменить %{question}'
+        back: 'Назад'
+    nav:
+      admin: 'Панель администратора ТестГуру'
+      welcome: 'Приветствуем, %{name} Гуру |'
+      logout: 'Выйти из системы'
+
+
+
+  test_mailer:
+    completed_test:
+      subject: 'Вы успешно завершили тест на ТестГуру'
+
   date:
     abbr_day_names:
     - Вс
@@ -22,7 +146,7 @@ ru:
     - Пт
     - Сб
     abbr_month_names:
-    - 
+    -
     - янв.
     - февр.
     - марта
@@ -48,7 +172,7 @@ ru:
       long: "%-d %B %Y"
       short: "%-d %b"
     month_names:
-    - 
+    -
     - января
     - февраля
     - марта

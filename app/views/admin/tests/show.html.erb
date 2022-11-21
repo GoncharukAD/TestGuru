@@ -1,12 +1,12 @@
-<h1><%= @test.title %> Test</h1>
+<h1><%= t('.header', title: @test.title) %></h1>
 
-<h2>All Questions</h2>
+<h2><%= t('.questions') %></h2>
 
-<%= link_to 'New Question', new_test_question_path(@test) %>
+<%= link_to t('.new_question'), new_test_question_path(@test) %>
 
 <ol>
   <%= render @test.questions %>
 </ol><br>
 
-<%= link_to 'Edit', edit_test_path(@test) %>
-<%= link_to 'Back', tests_path %>
+<%= link_to t('.edit'), edit_test_path(@test) %>
+<%= link_to t('.back'), tests_path %>
