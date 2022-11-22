@@ -107,6 +107,11 @@ ru:
         update: Обновить
         we_need_your_current_password_to_confirm_your_changes: введите текущий пароль для подтверждения изменений
       new:
+        minimum_password_length: "минимум %{count} символов"
+        first_name_enter: "Введите имя"
+        last_name_enter: "Введите фамилию"
+        email_enter: "Введите email"
+        header: "Стать гуру"
         sign_up: Регистрация
       signed_up: Добро пожаловать! Вы успешно зарегистрировались.
       signed_up_but_inactive: Вы успешно зарегистрированы. Однако, вы не можете войти в систему, потому что ваша учетная запись не активирована.
