@@ -14,6 +14,9 @@ ru:
     select:
       prompt: 'Выберите'
 
+    sessions:
+      sign_in_message: "Вы успешно вошли"
+
 
   shared:
     errors:
@@ -25,6 +28,12 @@ ru:
     signed_in:
       welcome: 'Добро пожаловать, %{name}'
       back: 'Назад'
+    navbar:
+      welcome: 'Приветствуем'
+      logout: 'Выйти'
+      login: 'Авторизоваться'
+      signup: 'Стать гуру'
+      admin: 'Открыть панель админа'
 
   tests:
     test:
@@ -38,8 +47,10 @@ ru:
 
   test_passages:
     result:
-      header: 'Тест %{title} успешно завершен!'
+      header: 'Тест %{title} завершен!'
       back: 'Назад'
+      success: 'Тест успешно пройден!'
+      failed: 'Тест не пройден!'
     show:
       header: 'Прохождение теста %{title}'
       back: 'Назад'
@@ -47,31 +58,32 @@ ru:
 
 
   admin:
-    success_create: 'Тест успешно создан'
-    success_update: 'Тест успешно обновлен'
-    success_delete: 'Тест успешно удален'
-    not_found: 'Тест не найден'
-    test:
-      delete: 'Удалить'
-      show: 'Показать'
-      edit: 'Редактировать'
-      confirm: 'Вы уверены?'
-    index:
-      header: 'Доступные тесты'
-      title: 'Название'
-      level:  'Уровень'
-      actions: 'Доступные действия'
-      new_test: 'Создать новый тест'
-    show:
-      header: '%{title} Тест'
-      questions: 'Все вопросы'
-      back: 'Назад'
-      edit: 'Редактировать'
-      new_question: 'Добавить новый вопрос'
-    new:
-      new_test: 'Создать новый тест'
-    edit:
-      edit_test: 'Редактировать %{title} Тест'
+    tests:
+      success_create: 'Тест успешно создан'
+      success_update: 'Тест успешно обновлен'
+      success_delete: 'Тест успешно удален'
+      not_found: 'Тест не найден'
+      test:
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+        confirm: 'Вы уверены?'
+      index:
+        header: 'Доступные тесты'
+        title: 'Название'
+        level:  'Уровень'
+        actions: 'Доступные действия'
+        new_test: 'Создать новый тест'
+      show:
+        header: '%{title} Тест'
+        questions: 'Все вопросы'
+        back: 'Назад'
+        edit: 'Редактировать'
+        new_question: 'Добавить новый вопрос'
+      new:
+        new_test: 'Создать новый тест'
+      edit:
+        edit_test: 'Редактировать %{title} Тест'
 
     answers:
       success_create: 'Ответ успешно создан'
@@ -127,8 +139,10 @@ ru:
         back: 'Назад'
     nav:
       admin: 'Панель администратора ТестГуру'
-      welcome: 'Приветствуем, %{name} Гуру |'
+      welcome: 'Приветствуем, %{name} |'
       logout: 'Выйти из системы'
+      user: 'Стать пользователем'
+      guru: 'Гуру'
 
 
 

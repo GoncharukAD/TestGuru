@@ -125,8 +125,9 @@ ru:
       already_signed_out: "Выход из системы уже выполнен."
       new:
         sign_in: "Войти"
-      signed_in: "Вход в систему выполнен."
-      signed_out: Выход из системы выполнен.
+        signed_in: "Вход в систему выполнен."
+        signed_out: Выход из системы выполнен.
+        header: 'Авторизация'
     shared:
       links:
         back: Назад

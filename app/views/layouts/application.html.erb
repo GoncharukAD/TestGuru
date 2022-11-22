@@ -15,11 +15,13 @@
 
   <body>
 
-  <%= render 'shared/signed_in' %>
+    <%= render 'shared/navbar' %>
 
-  <%= render 'shared/flash' %> %>
+    <div id="main" class="container">
+      <%= render 'shared/flash' %>
+      <%= yield %>
+    </div>
 
-   <%= yield %>
   <%= render 'shared/footer' %>
   </body>
 </html>
