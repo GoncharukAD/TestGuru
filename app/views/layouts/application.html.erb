@@ -17,11 +17,11 @@
 
     <%= render 'shared/navbar' %>
 
-    <div id="main" class="container">
-      <%= render 'shared/flash' %>
-      <%= yield %>
-    </div>
+    <%= render 'shared/flash' %>
 
-  <%= render 'shared/footer' %>
+
+    <div class="position-absolute bottom-0 start-50 translate-middle-x">
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>
