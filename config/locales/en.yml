@@ -53,6 +53,12 @@ en:
     signed_in:
       welcome: 'Welcome, %{name}'
       back: 'Back'
+    navbar:
+      welcome: 'Welcome'
+      logout: 'Log out'
+      login: 'Log in'
+      signup: 'Become a guru'
+      admin: 'Open Admin Panel'
 
   tests:
     test:
@@ -80,8 +86,7 @@ en:
         title: 'Test title'
         level:  'Difficulty level'
         actions: 'Possible actions'
-        links:
-          new_test: 'Create New test'
+        new_test: 'Create New test'
       form_inline:
         submit: 'Ok'
       show:
@@ -143,12 +148,16 @@ en:
 
     nav:
       admin: 'TestGuru Admin Panel'
-      welcome: 'Welcome, %{name} Guru |'
+      welcome: 'Welcome, %{name} |'
       logout: 'Logout'
+      user: 'Back to user'
+      guru: 'Guru'
 
     test_passages:
       result:
         header: 'The %{title} Test was Completed!'
+        success: 'Test was succesful!'
+        failed: 'Test was not succesful!'
         back: 'Back'
       show:
         header: 'Passing test %{title}'

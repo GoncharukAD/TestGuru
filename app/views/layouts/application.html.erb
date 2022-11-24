@@ -2,26 +2,26 @@
 <html>
   <head>
     <title>TestGuru</title>
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <style>
-        a {
-          text-decoration: none;
-        }
-    </style>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
 
-  <%= render 'shared/signed_in' %>
+    <%= render 'shared/navbar' %>
 
-  <%= render 'shared/flash' %> %>
+    <%= render 'shared/flash' %>
 
-   <%= yield %>
-  <%= render 'shared/footer' %>
+
+    <div class="position-absolute bottom-0 start-50 translate-middle-x">
+      <%= render 'shared/footer' %>
+    </div>
   </body>
 </html>

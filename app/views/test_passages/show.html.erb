@@ -1,8 +1,8 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<h1 class="display-4"><%= t('.header', title: @test_passage.test.title) %></h1>
 
-<b>
+<p class="text-start fw-bold fs-5">
   <%= @test_passage.current_question.title %>
-</b>
+</p>
 
 <p>
   <%= @test_passage.current_question_number %>/<%= @test_passage.questions_number  %>
@@ -17,5 +17,5 @@
   <% end %>
 
   <p><%= form.submit t('.next') %></p>
-  <p><%= link_to t('.back'), tests_path %></p>
+  <p><%= button_to t('.back'), tests_path %></p>
 <% end %>

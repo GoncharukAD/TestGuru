@@ -1,14 +1,19 @@
-<h1><%= t('.header') %></h1>
-<p>
-  <%= link_to t('.new_test'), new_admin_test_path %>
-</p>
+<div class="container">
+  <h1><%= t('.header') %></h1>
+<%# Поправить ублюдскую кнопку %>
+  <div class="position-absolute bottom-40 start-50 translate-middle">/
+    <button type="button" class="btn btn-outline-success">
+      <%= link_to t('.new_test'), new_admin_test_path %>
+    </button>
+  </div>
 
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th colspan="4"><%= t('.actions') %></th>
-  </tr>
+  <table class="table">
+    <tr>
+      <th scope="col"><%= t('.title') %></th>
+      <th scope="col"><%= t('.level') %></th>
+      <th colspan="4"><%= t('.actions') %></th>
+    </tr>
 
-  <%= render @tests %><br>
-</table>
+    <%= render @tests %><br>
+  </table>
+</div>

@@ -1,4 +1,8 @@
-<%# <% У меня есть хелпер.Подумать,нужен ли этот паршал?%> %>
-<% flash.each do |key, message| %>
-    <%= content_tag :p, message, class: "flash #{key}" %>
-<% end %>
+<div class="container">
+    <% flash.each do |key, message| %>
+        <div class="notification" <%= flash_class(key) %>>
+            <%= message%>
+        </div>
+    <% end %>
+    <%= yield %>
+</div>

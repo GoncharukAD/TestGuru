@@ -1,6 +1,0 @@
-<% if user_signed_in? %>
-    <p class="nav user">
-      <b><%= t('.welcome', name: current_user.first_name || current_user.email )%></b> <a href="/">Guru </a>
-    <%= button_to t('.back'),  destroy_user_session_path, method: :delete %>
-    </p>
-<% end %>
