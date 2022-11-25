@@ -163,6 +163,10 @@ en:
         header: 'Passing test %{title}'
         back: 'Back'
         next: 'Next'
+        qist_question: "Save question in Gist"
+      gist:
+        success: "Gist was successfuly created!"
+        failure: "An error occured while saving gist"
 
     test_mailer:
     completed_test:

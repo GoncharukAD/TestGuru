@@ -26,6 +26,10 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.0'
 
+#Networking
+
+gem 'faraday'
+
 #UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.2.2'
@@ -56,6 +60,11 @@ group :development do
   gem 'spring'
 
   gem 'letter_opener'
+
+  #Linter
+  gem 'rubocop', require: false
+
+  gem 'rubocop-rails', require: false
 end
 
 group :test do

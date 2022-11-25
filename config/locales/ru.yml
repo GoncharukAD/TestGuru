@@ -55,6 +55,10 @@ ru:
       header: 'Прохождение теста %{title}'
       back: 'Назад'
       next: 'Далее'
+      qist_question: "Сохранить вопрос в Gist"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure:  "Во время сохранения gist произошла ошибка"
 
 
   admin:
