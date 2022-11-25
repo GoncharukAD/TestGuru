@@ -64,6 +64,9 @@ group :development do
 
   gem 'letter_opener'
 
+  #ENV
+  gem 'dotenv-rails'
+
   #Linter
   gem 'rubocop', require: false
 
