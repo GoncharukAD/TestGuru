@@ -38,6 +38,9 @@ gem 'bootstrap', '~> 5.2.2'
 
 #gem 'rails-i18n', '~> 5.0'
 
+# GitHub Octokit: Ruby toolkit for the GitHub API
+gem 'octokit', '~> 5.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
