@@ -32,6 +32,8 @@
 en:
   hello: "Hello world"
 
+  #Добавить линки все из вью здесь,чтобы проще было изменить
+
   helpers:
     submit:
       test:
@@ -99,6 +101,11 @@ en:
         new_test: 'Create new test'
       edit:
         edit_test: ' Edit %{title} Test'
+      gists:
+        gists:
+          delete: 'Delete Gist'
+          confirm: 'Are you sure?'
+
 
     answers:
       success_create: 'Answer created successfully'
@@ -165,7 +172,7 @@ en:
         next: 'Next'
         qist_question: "Save question in Gist"
       gist:
-        success: "Gist was successfuly created!"
+        success: 'Gist was successfully created! Go to: %{url}'
         failure: "An error occured while saving gist"
 
     test_mailer:

@@ -27,9 +27,6 @@ class TestsController < ApplicationController
     @test = Test.find(params[:id])
   end
 
-  def gist
-  end
-
   def rescue_with_test_not_found
     render plain: 'Тест не найден'
   end

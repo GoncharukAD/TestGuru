@@ -1,6 +1,13 @@
 ru:
   hello: 'Привет, мир'
 
+  #Добавить линки все из вью здесь,чтобы проще было изменить
+  #back,confirm,
+
+  services:
+    gist_question_service:
+      description: '%{test_title}'
+
   helpers:
     submit:
       test:
@@ -57,7 +64,7 @@ ru:
       next: 'Далее'
       qist_question: "Сохранить вопрос в Gist"
     gist:
-      success: "Gist успешно сохранен!"
+      success: "Gist успешно сохранен! Посмотрите по ссылке: %{url}"
       failure:  "Во время сохранения gist произошла ошибка"
 
 
@@ -88,6 +95,16 @@ ru:
         new_test: 'Создать новый тест'
       edit:
         edit_test: 'Редактировать %{title} Тест'
+      gists:
+        gists:
+          delete: 'Удалить Gist'
+          confirm: 'Вы уверены?'
+        index:
+          header:
+          question: 'вопрос'
+          link_to_github: 'Ссылка на GitHub'
+          author: 'Автор'
+          action: 'Действие'
 
     answers:
       success_create: 'Ответ успешно создан'
