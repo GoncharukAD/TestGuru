@@ -1,5 +1,4 @@
 class GistQuestionService
-  attr_reader :client
 
   def initialize(question, client = default_client)
     @question = question
@@ -14,7 +13,7 @@ class GistQuestionService
   private
 
   def default_client
-    Octokit::Client.new(access_token: ENV['GITHUB_TOKEN'])
+    Octokit::Client.new(access_token: ENV.fetch('GITHUB_TOKEN'))
   end
 
   def gist_params
@@ -29,8 +28,6 @@ class GistQuestionService
   end
 
   def gist_content
-    content = [@question.title]
-    content += @question.answers.pluck(:title)
-    content.join("\n")
+    [@question.title, *@question.answers.pluck(:title)].join("\n")
   end
 end

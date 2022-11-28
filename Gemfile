@@ -26,10 +26,6 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.0'
 
-#Networking
-
-gem 'faraday'
-
 #UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.2.2'

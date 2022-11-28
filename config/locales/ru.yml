@@ -53,6 +53,7 @@ ru:
 
 
   test_passages:
+    gist_link: 'Ссылка на ваш GitHub Gist'
     result:
       header: 'Тест %{title} завершен!'
       back: 'Назад'
@@ -69,6 +70,13 @@ ru:
 
 
   admin:
+    questions:
+      question:
+        gist_list: 'Список Gists'
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+        confirm: 'Вы уверены?'
     tests:
       success_create: 'Тест успешно создан'
       success_update: 'Тест успешно обновлен'
