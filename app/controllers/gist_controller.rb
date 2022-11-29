@@ -1,12 +1,11 @@
 class GistsController < ApplicationController
 
-  private
-  def create
+  def create(url)
     gist = Gist.new(
       question_id: @test_passage.current_question.id,
-      gist_url: @created_gist_url,
+      gist_url: url,
       user_id: current_user.id
     )
-    gist.save
+    gist.save!
   end
 end

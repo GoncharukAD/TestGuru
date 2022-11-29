@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'tests#index'
 
-  resources :gists, only: :index
+  resources :gists, only: %i[index create]
 
   resources :tests, only: :index  do
     member do

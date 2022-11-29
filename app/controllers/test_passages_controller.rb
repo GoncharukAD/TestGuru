@@ -20,13 +20,13 @@ class TestPassagesController < ApplicationController
 
   def gist
     result = GistQuestionService.new(@test_passage.current_question).call
-    @created_gist_url = result.url
 
-    flash_options = if result
-      gist_create(result.html_url)
+    flash_options = if result.success?
+    @test_passage.user.gists.create(result.url)
+    byebug
 
       {notice: t('.success', url: view_context.link_to(t('.gist_link'),
-                                                          @created_gist_url,
+                                                          result.url,
                                                           target: '_blank',
                                                           rel: 'noopener'))}
     else
@@ -37,16 +37,6 @@ class TestPassagesController < ApplicationController
   end
 
   private
-
-  def gist_create(url)
-    gist = Gist.new(
-      question_id: @test_passage.current_question.id,
-      gist_url: @created_gist_url,
-      user_id: current_user.id
-    )
-    gist.save
-  end
-
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])

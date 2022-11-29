@@ -1,5 +1,11 @@
 class GistQuestionService
+  Result = Struct.new(:service_result) do
+    delegate :url, to: :service_result, allow_nil: true
 
+    def success?
+      service_result&.url.present?
+    end
+  end
   def initialize(question, client = default_client)
     @question = question
     @test = @question.test
@@ -7,7 +13,7 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params) #create_gist метод из Oktokit
+    Result.new(@client.create_gist(gist_params.to_json))
   end
 
   private
@@ -24,6 +30,7 @@ class GistQuestionService
           content: gist_content
         }
       },
+      public: true
     }
   end
 
