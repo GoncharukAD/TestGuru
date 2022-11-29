@@ -71,6 +71,12 @@ en:
       level:  'Difficulty level'
       questions_count: 'Number of questions'
 
+  gists:
+    create:
+      gist_link: 'Link on your GitHub Gist'
+      success: 'Gist was successfully created! Go to: %{url}'
+      failure: "An error occured while saving gist"
+
 
   admin:
     questions:
@@ -168,7 +174,6 @@ en:
       guru: 'Guru'
 
     test_passages:
-      gist_link: 'Link on your GitHub Gist'
       result:
         header: 'The %{title} Test was Completed!'
         success: 'Test was succesful!'
@@ -179,9 +184,6 @@ en:
         back: 'Back'
         next: 'Next'
         qist_question: "Save question in Gist"
-      gist:
-        success: 'Gist was successfully created! Go to: %{url}'
-        failure: "An error occured while saving gist"
 
     test_mailer:
     completed_test:

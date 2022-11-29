@@ -42,6 +42,12 @@ ru:
       signup: 'Стать гуру'
       admin: 'Админ'
 
+  gists:
+    create:
+      gist_link: 'Ссылка на ваш GitHub Gist'
+      success: "Gist успешно сохранен! Посмотрите по ссылке: %{url}"
+      failure:  "Во время сохранения gist произошла ошибка"
+
   tests:
     test:
       start: 'Пройти тест'
@@ -53,7 +59,6 @@ ru:
 
 
   test_passages:
-    gist_link: 'Ссылка на ваш GitHub Gist'
     result:
       header: 'Тест %{title} завершен!'
       back: 'Назад'
@@ -64,10 +69,6 @@ ru:
       back: 'Назад'
       next: 'Далее'
       qist_question: "Сохранить вопрос в Gist"
-    gist:
-      success: "Gist успешно сохранен! Посмотрите по ссылке: %{url}"
-      failure:  "Во время сохранения gist произошла ошибка"
-
 
   admin:
     questions:
