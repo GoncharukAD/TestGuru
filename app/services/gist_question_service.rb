@@ -1,11 +1,8 @@
 class GistQuestionService
   Result = Struct.new(:service_result) do
     delegate :url, to: :service_result, allow_nil: true
-
-    def success?
-      service_result&.url.present?
-    end
   end
+
   def initialize(question, client = default_client)
     @question = question
     @test = @question.test

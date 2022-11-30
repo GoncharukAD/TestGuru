@@ -18,10 +18,6 @@ class TestPassagesController < ApplicationController
     end
   end
 
-  def gist
-    current_user.gists.create!
-  end
-
   private
 
   def set_test_passage
