@@ -1,9 +1,7 @@
 class GistsController < ApplicationController
 
   def create
-    test_passage = current_user
-                  .test_passages.order(:id)
-                  .where('id > ?', current_user.id).first
+    test_passage = TestPassage.find( params.require(:test_passage))
 
     question = test_passage.current_question
 
