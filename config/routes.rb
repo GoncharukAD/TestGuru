@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   root 'tests#index'
 
+  resources :gists, only: %i[index create]
+
   resources :tests, only: :index  do
     member do
       post :start
@@ -20,6 +22,7 @@ Rails.application.routes.draw do
     resources :tests
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index
+    resources :gists, only: %i[index destroy]
     end
   end
 end

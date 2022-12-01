@@ -25,6 +25,7 @@ class Admin::QuestionsController < Admin::BaseController
   end
 
   def create
+    @question = @test.questions.new(question_params)
     @question.save ? (redirect_to @question, notice: t('.success_create')) : (render :new)
   end
 

@@ -7,4 +7,4 @@
   <p style="color: red"><%= @test_passage.result %></p>
   <p><%= t('.failed') %></p>
 <% end %>
-<%= button_to t('.back'), tests_path %>
+<%= button_to t('.back'), root_path, method: :get  %>

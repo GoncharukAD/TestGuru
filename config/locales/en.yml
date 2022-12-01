@@ -32,6 +32,8 @@
 en:
   hello: "Hello world"
 
+  #Добавить линки все из вью здесь,чтобы проще было изменить
+
   helpers:
     submit:
       test:
@@ -69,8 +71,21 @@ en:
       level:  'Difficulty level'
       questions_count: 'Number of questions'
 
+  gists:
+    create:
+      gist_link: 'Link on your GitHub Gist'
+      success: 'Gist was successfully created! Go to: %{url}'
+      failure: "An error occured while saving gist"
+
 
   admin:
+    questions:
+      question:
+        gist_list: 'Gists list'
+        delete: 'Delete'
+        show: 'Show'
+        edit: 'Edit'
+        confirm: 'Are you sure?'
     tests:
       success_create: 'Test created successfully'
       success_update: 'Test successfully updated'
@@ -99,6 +114,11 @@ en:
         new_test: 'Create new test'
       edit:
         edit_test: ' Edit %{title} Test'
+      gists:
+        gists:
+          delete: 'Delete Gist'
+          confirm: 'Are you sure?'
+
 
     answers:
       success_create: 'Answer created successfully'
@@ -163,6 +183,7 @@ en:
         header: 'Passing test %{title}'
         back: 'Back'
         next: 'Next'
+        qist_question: "Save question in Gist"
 
     test_mailer:
     completed_test:

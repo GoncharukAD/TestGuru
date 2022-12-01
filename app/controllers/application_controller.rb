@@ -12,11 +12,11 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_in, keys: [:email])
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :last_name, :first_name, :email])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :last_name, :first_name, :email])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name last_name first_name email])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[name last_name first_name email])
   end
 
-  def after_sign_in_path_for(resource)
+  def after_sign_in_path_for(_resource)
     current_user.is_a?(Admin) ? admin_tests_path : tests_path
   end
 

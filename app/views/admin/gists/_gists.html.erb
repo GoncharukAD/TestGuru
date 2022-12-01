@@ -1,0 +1,13 @@
+<tbody>
+  <tr>
+    <td><%= link_to truncate(gist.question.body, length: 25), admin_question_path(gist.question) %></td>
+    <td><%=link_to fetch_gist_hash_from_url(gist.gist_url), gist.gist_url, target: '_blank' %></td>
+    <td class="align-middle">
+        <%= button_to t('.delete'),
+        admin_gist_path(gist),
+        method: :delete,
+        data: { confirm: t('.confirm')}
+        class: 'btn btn-danger' %>
+    </td>
+  <tr>
+</tbody>
