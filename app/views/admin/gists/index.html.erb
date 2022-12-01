@@ -1,0 +1,20 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-12">
+    <h2><%= t('.header') %></h2>
+
+    <p><%= link_to t('links.back'), admin_tests_path, class: 'btn btn-primary' %></p>
+
+    <table class="table" style="text-align: center">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col"><%= t('.question') %></th>
+          <th scope="col"><%= t('.link_to_github') %></th>
+          <th scope="col"><%= t('.author') %></th>
+          <th scope="col"><%= t('.action') %></th>
+        </tr>
+      </thead>
+
+      <%= render @gists %>
+    </table>
+  </div>
+</div>

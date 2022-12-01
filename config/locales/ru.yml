@@ -1,6 +1,13 @@
 ru:
   hello: 'Привет, мир'
 
+  #Добавить линки все из вью здесь,чтобы проще было изменить
+  #back,confirm,
+
+  services:
+    gist_question_service:
+      description: '%{test_title}'
+
   helpers:
     submit:
       test:
@@ -14,6 +21,9 @@ ru:
     select:
       prompt: 'Выберите'
 
+    sessions:
+      sign_in_message: "Вы успешно вошли"
+
 
   shared:
     errors:
@@ -25,6 +35,18 @@ ru:
     signed_in:
       welcome: 'Добро пожаловать, %{name}'
       back: 'Назад'
+    navbar:
+      welcome: 'Приветствуем'
+      logout: 'Выйти'
+      login: 'Авторизоваться'
+      signup: 'Стать гуру'
+      admin: 'Админ'
+
+  gists:
+    create:
+      gist_link: 'Ссылка на ваш GitHub Gist'
+      success: "Gist успешно сохранен! Посмотрите по ссылке: %{url}"
+      failure:  "Во время сохранения gist произошла ошибка"
 
   tests:
     test:
@@ -38,12 +60,121 @@ ru:
 
   test_passages:
     result:
-      header: 'Тест %{title} успешно завершен!'
+      header: 'Тест %{title} завершен!'
       back: 'Назад'
+      success: 'Тест успешно пройден!'
+      failed: 'Тест не пройден!'
     show:
       header: 'Прохождение теста %{title}'
       back: 'Назад'
       next: 'Далее'
+      qist_question: "Сохранить вопрос в Gist"
+
+  admin:
+    questions:
+      question:
+        gist_list: 'Список Gists'
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+        confirm: 'Вы уверены?'
+    tests:
+      success_create: 'Тест успешно создан'
+      success_update: 'Тест успешно обновлен'
+      success_delete: 'Тест успешно удален'
+      not_found: 'Тест не найден'
+      test:
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+        confirm: 'Вы уверены?'
+      index:
+        header: 'Доступные тесты'
+        title: 'Название'
+        level:  'Уровень'
+        actions: 'Доступные действия'
+        new_test: 'Создать новый тест'
+      show:
+        header: '%{title} Тест'
+        questions: 'Все вопросы'
+        back: 'Назад'
+        edit: 'Редактировать'
+        new_question: 'Добавить новый вопрос'
+      new:
+        new_test: 'Создать новый тест'
+      edit:
+        edit_test: 'Редактировать %{title} Тест'
+      gists:
+        gists:
+          delete: 'Удалить Gist'
+          confirm: 'Вы уверены?'
+        index:
+          header:
+          question: 'вопрос'
+          link_to_github: 'Ссылка на GitHub'
+          author: 'Автор'
+          action: 'Действие'
+
+    answers:
+      success_create: 'Ответ успешно создан'
+      success_update: 'Ответ успешно обновлен'
+      success_delete: 'Ответ успешно удален'
+      not_found: 'Ответ не найден'
+      answer:
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+        confirm: 'Вы уверены?'
+      new:
+        new_answer: 'Создать новый ответ'
+        show_answer: 'Показать ответ'
+        back: 'Назад'
+      edit:
+        edit_answer: 'Изменить ответ'
+        back: 'Назад'
+      show:
+        question: 'Вопрос'
+        answer: 'Ответ'
+        back: 'Назад'
+      new:
+        new_answer: 'Создать новый ответ'
+        show_answer: 'Показать ответ'
+        back: 'Назад'
+      edit:
+        edit_answer: 'Изменить ответ'
+        back: 'Назад'
+
+    questions:
+      success_create: 'Вопрос успешно создан'
+      success_update: 'Вопрос успешно обновлен'
+      success_delete: 'Вопрос успешно удален'
+      not_found: 'Вопрос не найден'
+      question:
+        delete: 'Удалить'
+        show: 'Показать'
+        edit: 'Редактировать'
+        confirm: 'Вы уверены?'
+      show:
+        header: 'Вопрос: %{question}'
+        answers_list: 'Список ответов'
+        new_answer: 'Добавить новый ответ'
+        edit_question: 'Изменить вопрос'
+        back: 'Назад'
+      new:
+        new_question: 'Создать новый вопрос'
+        show_question: 'Показать вопрос' #Добавить ссылку
+        back: 'Назад'
+      edit:
+        edit_question: 'Изменить %{question}'
+        back: 'Назад'
+    nav:
+      admin: 'Панель администратора ТестГуру'
+      welcome: 'Приветствуем, %{name}'
+      logout: 'Выйти'
+      user: 'Стать пользователем'
+      guru: 'Гуру'
+
+
 
   test_mailer:
     completed_test:
