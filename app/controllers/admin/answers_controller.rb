@@ -25,7 +25,7 @@ class Admin::AnswersController < Admin::BaseController
   end
 
   def create
-    @answer = @question.answers.new(question_params)
+    @answer = @question.answers.new(answer_params)
     @answer.save ? (redirect_to @answer, t('.success_create')) : (render :new)
   end
 

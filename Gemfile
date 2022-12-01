@@ -34,6 +34,9 @@ gem 'bootstrap', '~> 5.2.2'
 
 #gem 'rails-i18n', '~> 5.0'
 
+# GitHub Octokit: Ruby toolkit for the GitHub API
+gem 'octokit', '~> 5.0'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -56,6 +59,14 @@ group :development do
   gem 'spring'
 
   gem 'letter_opener'
+
+  #ENV
+  gem 'dotenv-rails'
+
+  #Linter
+  gem 'rubocop', require: false
+
+  gem 'rubocop-rails', require: false
 end
 
 group :test do
