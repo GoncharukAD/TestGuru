@@ -5,7 +5,7 @@ class GistsController < ApplicationController
     result = GistQuestionService.new(test_passage.current_question).call
 
     if result.success?
-      current_user.gists.create(
+      current_user.gists.create!(
         question_id: test_passage.current_question.id,
         gist_url: result.url)
 
