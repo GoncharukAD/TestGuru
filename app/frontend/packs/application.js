@@ -10,6 +10,7 @@ import "channels"
 import '../js/bootstrap_js_files.js'
 
 require("packs/utilities/sorting")
+// require("packs/utilities/password_confirmation")
 
 
 Rails.start()
