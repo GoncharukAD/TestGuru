@@ -1,23 +1,30 @@
-<div class="container">
-  <h1><%= t('.header') %></h1>
-<%# Поправить ублюдскую кнопку %>
-  <div class="position-absolute bottom-40 start-50 translate-middle">/
-    <button type="button" class="btn btn-outline-success">
-      <%= link_to t('.new_test'), new_admin_test_path %>
-    </button>
-  </div>
+<div class="row justify-content-center w-100">
+  <h1 class="col-12 text-center"> <%= t('.header') %> </h1>
 
-  <table class="table">
-    <tr>
-      <th class="sort-by-title pointer" scope="col">
+    <table class="table table-sm table-bordered" id="admin_test_table">
+    <tr class="thead-dark">
+      <th class="sort-by-title pointer align-middle text-center" style="width:13%" scope="col">
         <%= t('.title') %>
         <%= octicon 'arrow-up', class: 'text-success hide' %>
         <%= octicon 'arrow-down', class: 'text-success hide' %>
       </th>
-      <th scope="col"><%= t('.level') %></th>
+      <th th class="sort-by-level pointer align-middle text-center" style="width:13%" scope="col">
+        <%= t('.level') %>
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+      </th>
       <th colspan="4"><%= t('.actions') %></th>
     </tr>
 
     <%= render @tests %><br>
   </table>
+
+   <table class="table table-borderless">
+    <tr>
+      <button type="button" class="btn btn-outline-success">
+      <%= link_to t('.new_test'), new_admin_test_path %>
+      </button>
+    </tr>
+   </table>
+
 </div>

@@ -1,10 +1,19 @@
-  <div class="container">
+<div class="row justify-content-center">
   <h1><%= t('.header')%></h1>
+  <br>
 
-  <table class="table">
+  <table class="table table-bordered" id="test_table">
     <tr>
-      <th><%= t('.title') %></th>
-      <th><%= t('.level') %></th>
+      <th class="sort-by-title pointer align-middle text-center">
+        <%= t('.title') %>
+        <%= octicon 'arrow-up', class: 'text-success hide'%>
+        <%= octicon 'arrow-down', class: 'text-success hide'%>
+      </th>
+      <th class="sort-by-level pointer align-middle text-center">
+        <%= t('.level') %>
+        <%= octicon 'arrow-up', class: 'text-success hide'%>
+        <%= octicon 'arrow-down', class: 'text-success hide'%>
+      </th>
       <th><%= t('.questions_count') %></th>
     </tr>
 

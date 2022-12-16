@@ -2,9 +2,9 @@
   <h2><%= t('.header') %></h2>
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { id: "new_user_reg_form" }) do |f| %>
-    <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="form-group">
+      <%= render "devise/shared/error_messages", resource: resource %>
       <p>
         <%= f.label :email %><br />
         <%= f.email_field :email, required: true, autofocus: true, autocomplete: "email", placeholder: t('.email_enter') %>
@@ -42,6 +42,7 @@
       <%= f.submit t('.sign_up'), class: "btn btn-primary" %>
     </div>
   <% end %>
-
-  <%= render "devise/shared/links" %>
+    <div class="mt-1">
+      <%= render "devise/shared/links" %>
+    </div>
 </div>
