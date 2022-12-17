@@ -4,7 +4,7 @@
 // that code so it'll be compiled.
 // require("./sorting")
 // require("./password_check")
-require("./sort_lesson")
+require("./packs/sort_lesson")
 
 
 import Rails from "@rails/ujs"
