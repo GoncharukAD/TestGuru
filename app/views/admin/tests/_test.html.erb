@@ -1,12 +1,12 @@
 <tr>
   <td><%= test.title %></td>
   <td><%= test_level(test) %></td>
-  <td><%= link_to t('.edit'), edit_admin_test_path(test)%></td>
-  <td><%= link_to t('.show'), admin_test_path(test)%></td>
-  <<td>
-    <%= link_to t('.delete'),
+  <td><%= button_to t('.edit'), edit_admin_test_path(test)%></td>
+  <td><%= button_to t('.show'), admin_test_path(test)%></td>
+  <td>
+    <%= button_to t('.delete'),
     admin_test_path(test.id),
     method: :delete,
-    data: { confirm: t('.confirm')}%>
-  </td>>
+    data: { confirm: t('.confirm')} %>
+  </td>
 <tr>
