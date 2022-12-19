@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <tr>
   <td><%= test.title %></td>
   <td><%= test_level(test) %></td>
@@ -10,3 +11,12 @@
   <td><%= button_to 'Start', start_test_path(test), title: 'Пройти тест' %></td>
 >>>>>>> parent of ed123a1... Add localosation  (#15)
 <tr>
+=======
+<tr>
+  <td><%= test.title %></td>
+  <td><%= test_level(test) %></td>
+  <td><%= test.questions.count %></td>
+  </td>
+  <td><%= button_to t('.start'), start_test_path(test)%></td>
+<tr>
+>>>>>>> fixbranch

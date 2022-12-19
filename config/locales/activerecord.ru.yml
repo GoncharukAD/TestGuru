@@ -1,0 +1,32 @@
+ru:
+  activerecord:
+    models:
+      test: 'Тест'
+      result: 'Результат'
+      question: 'Вопрос'
+
+    attributes:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+        category: 'Категория'
+        category_id: 'Категория'
+      question:
+        body: Формулировка вопроса
+      answer:
+        body: Вариант ответа
+        correct: Правильность
+      user:
+        first_name: Имя
+        last_name: Фамилия
+        email: Электронная почта
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+
+    errors:
+      messages:
+        blank: 'Не может быть пустым'
+        record_invalid: 'Возникли ошибки: %{errors}'
+        restrict_dependent_destroy:
+          has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
+          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
@@ -192,3 +193,195 @@ en:
 =======
   Author: "Author"
 >>>>>>> parent of ed123a1... Add localosation  (#15)
+=======
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at https://guides.rubyonrails.org/i18n.html.
+
+en:
+  hello: "Hello world"
+
+  #Добавить линки все из вью здесь,чтобы проще было изменить
+
+  helpers:
+    submit:
+      test:
+        create: 'Create New test'
+        update: 'Update test'
+    label:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category_id: 'Category'
+    select:
+      prompt: "Please select" #Это для категорий
+
+  shared:
+    errors:
+      header:
+        one: '%{count} error detected'
+        others: '%{count} errors detected'
+    signed_in:
+      welcome: 'Welcome, %{name}'
+      back: 'Back'
+    navbar:
+      welcome: 'Welcome'
+      logout: 'Log out'
+      login: 'Log in'
+      signup: 'Become a guru'
+      admin: 'Open Admin Panel'
+
+  tests:
+    test:
+      start: 'Start Test'
+    index:
+      header: 'All tests'
+      title: 'Test title'
+      level:  'Difficulty level'
+      questions_count: 'Number of questions'
+
+  gists:
+    create:
+      gist_link: 'Link on your GitHub Gist'
+      success: 'Gist was successfully created! Go to: %{url}'
+      failure: "An error occured while saving gist"
+
+
+  admin:
+    questions:
+      question:
+        gist_list: 'Gists list'
+        delete: 'Delete'
+        show: 'Show'
+        edit: 'Edit'
+        confirm: 'Are you sure?'
+    tests:
+      success_create: 'Test created successfully'
+      success_update: 'Test successfully updated'
+      success_delete: 'Test successfully deleted'
+      not_found: 'Test not found'
+      test:
+        delete: 'Delete'
+        show: 'Show'
+        edit: 'Edit'
+        confirm: 'Are you sure?'
+      index:
+        header: 'All tests'
+        title: 'Test title'
+        level:  'Difficulty level'
+        actions: 'Possible actions'
+        new_test: 'Create New test'
+      form_inline:
+        submit: 'Ok'
+      show:
+        header: '%{title} Test'
+        questions: 'All questions'
+        back: 'Back'
+        edit: 'Edit'
+        new_question: 'Add new question'
+      new:
+        new_test: 'Create new test'
+      edit:
+        edit_test: ' Edit %{title} Test'
+      gists:
+        gists:
+          delete: 'Delete Gist'
+          confirm: 'Are you sure?'
+
+
+    answers:
+      success_create: 'Answer created successfully'
+      success_update: 'Answer  successfully updated'
+      success_delete: 'Answer  successfully deleted'
+      not_found: 'Answer not found'
+      answer:
+        delete: 'Delete'
+        show: 'Show'
+        edit: 'Edit'
+        confirm: 'Are you sure?'
+      show:
+        question: 'Question'
+        answer: 'Answer'
+        back: 'Back'
+      new:
+        new_answer: 'Create new answer'
+        show_answer: 'Show answer'
+        back: 'Back'
+      edit:
+        edit_answer: ' Edit answer'
+        back: 'Back'
+
+    questions:
+      success_create: 'Question created successfully'
+      success_update: 'Question successfully updated'
+      success_delete: 'Question  successfully deleted'
+      not_found: 'Question not found'
+      question:
+        delete: 'Delete'
+        show: 'Show'
+        edit: 'Edit'
+        confirm: 'Are you sure?'
+      show:
+        header: 'Question: %{question}'
+        answers_list: 'Answers list'
+        new_answer: 'Add new answer'
+        edit_question: 'Edit question'
+        back: 'Back'
+      new:
+        new_question: 'Create new question'
+        show_question: 'Show question' #Добавить ссылку
+        back: 'Back'
+      edit:
+        edit_question: 'Edit %{question}'
+        back: 'Back'
+
+    nav:
+      admin: 'TestGuru Admin Panel'
+      welcome: 'Welcome, %{name} |'
+      logout: 'Logout'
+      user: 'Back to user'
+      guru: 'Guru'
+
+    test_passages:
+      result:
+        header: 'The %{title} Test was Completed!'
+        success: 'Test was succesful!'
+        failed: 'Test was not succesful!'
+        back: 'Back'
+      show:
+        header: 'Passing test %{title}'
+        back: 'Back'
+        next: 'Next'
+        qist_question: "Save question in Gist"
+
+    test_mailer:
+    completed_test:
+      subject: 'You just completed the TestGuru test'
+>>>>>>> fixbranch

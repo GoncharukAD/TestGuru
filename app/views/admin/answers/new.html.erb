@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>New Answer</h1>
 
 <p>
@@ -7,3 +8,14 @@
 <%= render 'form', answer: @answer %>
 
 <%= link_to 'Back', admin_question_path(@question) %>
+=======
+<h1><%= t('.new_answer')%></h1>
+
+<p>
+  <%= @question.title %>
+</p>
+
+<%= render 'form', answer: @answer %>
+
+<%= link_to  t('.back'), admin_question_path(@question) %>
+>>>>>>> fixbranch

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <h1 class="display-4"><%= t('.header', title: @test_passage.test.title) %></h1>
 =======
 <h1>Passing the <%= @test_passage.test.title %> test</h1>
@@ -29,3 +30,27 @@
   <p><%= link_to 'Back', tests_path %></p>
 >>>>>>> parent of ed123a1... Add localosation  (#15)
 <% end %>
+=======
+<h1 class="display-4"><%= t('.header', title: @test_passage.test.title) %></h1>
+
+<p class="text-start fw-bold fs-5">
+  <%= @test_passage.current_question.title %>
+</p>
+
+<p>
+  <%= @test_passage.current_question_number %>/<%= @test_passage.questions_number  %>
+</p>
+
+<%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
+  <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :title, include_hidden: false do |b| %>
+    <p>
+      <%= b.check_box id: "answer_ids_#{b.object_id}" %>
+      <%= b.label %>
+    </p>
+  <% end %>
+
+  <p><%= link_to t('.qist_question'),  gists_path(:test_passage_id=> @test_passage.id), method: :post %></p>
+  <p><%= form.submit t('.next') %></p>
+  <p><%= button_to t('.back'), tests_path %></p>
+<% end %>
+>>>>>>> fixbranch

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <li>
   <%= answer.title %> </td>
   <%= link_to 'Edit', edit_admin_answer_path(answer), title: 'Изменить вопрос' %>
@@ -8,3 +9,14 @@
     data: { confirm: 'Are you sure?' },
     title: 'Удалить вопрос' %>
 </li>
+=======
+<li>
+  <%= answer.title %> </td>
+  <%= link_to t('.edit'), edit_admin_answer_path(answer) %>
+  <%= link_to t('.show'), admin_answer_path(answer) %>
+  <%= link_to t('.delete'),
+    admin_test_path(answer),
+    method: :delete,
+    data: { confirm: t('.confirm') }, %>
+</li>
+>>>>>>> fixbranch

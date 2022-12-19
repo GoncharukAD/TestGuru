@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 <%= question_header(@question) %>
 <%= render 'form' %>
 <%= link_to 'Back', admin_test_path(@question.test_id) %>
+=======
+<%= t('edit_question', question: question_header(@question)) %>
+<%= render 'form' %>
+<%= link_to t('.back'), admin_test_path(@question.test_id) %>
+>>>>>>> fixbranch

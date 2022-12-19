@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>Edit Answer</h1>
 
 <p>
@@ -8,3 +9,15 @@
 
 <%= link_to 'Show', @answer %> |
 <%= link_to 'Back', admin_question_path(@answer.question) %>
+=======
+<h1><%= t('.edit_answer') %></h1>
+
+<p>
+  <%= @answer.question.title %>
+</p>
+
+<%= render 'form', answer: @answer %>
+
+<%= link_to t('.show_answer'), @answer %> |
+<%= link_to t('.back'), admin_question_path(@answer.question) %>
+>>>>>>> fixbranch
