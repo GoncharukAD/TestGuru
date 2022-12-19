@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # frozen_string_literal: true
 
 module ApplicationHelper
@@ -9,15 +8,3 @@ module ApplicationHelper
     end
   end
 end
-=======
-# frozen_string_literal: true
-
-module ApplicationHelper
-  def flash_class(key)
-    case key
-    when 'notice' then 'is-success'
-    when 'alert' then 'is-danger'
-    end
-  end
-end
->>>>>>> fixbranch

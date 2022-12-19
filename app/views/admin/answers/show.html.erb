@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1>Question</h2>
 
 <p>
@@ -16,22 +15,3 @@
 
 
 <%= link_to 'Back', admin_question_path(@answer.question) %>
-=======
-<h1><% t('.question') %></h2>
-
-<p>
- <%= @answer.question.title%>
-</p>
-
-<p>
-  <%= t('.answer') %>
-  <%= @answer.title%>
-</p>
-
-<p>
- <%= @answer.correct%>
-</p>
-
-
-<%= link_to t('.back'), admin_question_path(@answer.question) %>
->>>>>>> fixbranch

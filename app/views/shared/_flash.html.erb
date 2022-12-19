@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container">
     <% flash.each do |key, message| %>
         <div class="notification" <%= flash_class(key) %>>
@@ -7,13 +6,3 @@
     <% end %>
     <%= yield %>
 </div>
-=======
-<div class="container">
-    <% flash.each do |key, message| %>
-        <div class="notification" <%= flash_class(key) %>>
-            <%= message%>
-        </div>
-    <% end %>
-    <%= yield %>
-</div
->>>>>>> fixbranch
