@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
   <h1><%= t('.header') %></h1>
 <%# Поправить ублюдскую кнопку %>
@@ -13,6 +14,19 @@
       <th scope="col"><%= t('.level') %></th>
       <th colspan="4"><%= t('.actions') %></th>
     </tr>
+=======
+<h1>All Test</h1>
+<p>
+  <%= link_to 'New test', new_admin_test_path %>
+</p>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Level</th>
+    <th colspan="4">Actions</th>
+  </tr>
+>>>>>>> parent of ed123a1... Add localosation  (#15)
 
     <%= render @tests %><br>
   </table>

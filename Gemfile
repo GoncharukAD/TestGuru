@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'devise', '~> 4.0'
 
+<<<<<<< HEAD
 #UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.2.2'
@@ -37,6 +38,8 @@ gem 'bootstrap', '~> 5.2.2'
 # GitHub Octokit: Ruby toolkit for the GitHub API
 gem 'octokit', '~> 5.0'
 
+=======
+>>>>>>> parent of ed123a1... Add localosation  (#15)
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

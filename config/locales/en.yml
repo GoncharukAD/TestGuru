@@ -31,6 +31,7 @@
 
 en:
   hello: "Hello world"
+<<<<<<< HEAD
 
   #Добавить линки все из вью здесь,чтобы проще было изменить
 
@@ -188,3 +189,6 @@ en:
     test_mailer:
     completed_test:
       subject: 'You just completed the TestGuru test'
+=======
+  Author: "Author"
+>>>>>>> parent of ed123a1... Add localosation  (#15)

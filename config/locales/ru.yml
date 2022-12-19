@@ -1,4 +1,5 @@
 ru:
+<<<<<<< HEAD
   hello: 'Привет, мир'
 
   #Добавить линки все из вью здесь,чтобы проще было изменить
@@ -180,6 +181,21 @@ ru:
     completed_test:
       subject: 'Вы успешно завершили тест на ТестГуру'
 
+=======
+  activerecord:
+    models:
+      user: Пользователь
+      test: Тест
+      result: Результат
+      question: Вопрос
+      
+    errors:
+      messages:
+        record_invalid: 'Возникли ошибки: %{errors}'
+        restrict_dependent_destroy:
+          has_one: 'Невозможно удалить запись, так как существует зависимость: %{record}'
+          has_many: 'Невозможно удалить запись, так как существуют зависимости: %{record}'
+>>>>>>> parent of ed123a1... Add localosation  (#15)
   date:
     abbr_day_names:
     - Вс
@@ -190,7 +206,7 @@ ru:
     - Пт
     - Сб
     abbr_month_names:
-    -
+    - 
     - янв.
     - февр.
     - марта
@@ -216,7 +232,7 @@ ru:
       long: "%-d %B %Y"
       short: "%-d %b"
     month_names:
-    -
+    - 
     - января
     - февраля
     - марта

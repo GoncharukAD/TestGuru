@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <h1 class="display-4"><%= t('.header', title: @test_passage.test.title) %></h1>
+=======
+<h1>Passing the <%= @test_passage.test.title %> test</h1>
+>>>>>>> parent of ed123a1... Add localosation  (#15)
 
 <p class="text-start fw-bold fs-5">
   <%= @test_passage.current_question.title %>
@@ -16,7 +20,12 @@
     </p>
   <% end %>
 
+<<<<<<< HEAD
   <p><%= link_to t('.qist_question'),  gists_path(:test_passage_id=> @test_passage.id), method: :post %></p>
   <p><%= form.submit t('.next') %></p>
   <p><%= button_to t('.back'), tests_path %></p>
+=======
+  <p><%= form.submit 'Next' %></p>
+  <p><%= link_to 'Back', tests_path %></p>
+>>>>>>> parent of ed123a1... Add localosation  (#15)
 <% end %>

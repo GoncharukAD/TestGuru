@@ -121,13 +121,18 @@ ru:
       updated: Ваша учетная запись изменена.
       updated_but_not_signed_in: Ваш аккаунт успешно обновлен, но так как пароль был изменен, необходимо выполнить вход еще раз
     sessions:
-      sign_in_message: "Вы успешно вошли в систему"
-      already_signed_out: "Выход из системы уже выполнен."
+      already_signed_out: Выход из системы уже выполнен.
       new:
+<<<<<<< HEAD
         sign_in: "Войти"
         signed_in: "Вход в систему выполнен."
         signed_out: Выход из системы выполнен.
         header: 'Авторизация'
+=======
+        sign_in: Войти
+      signed_in: Вход в систему выполнен.
+      signed_out: Выход из системы выполнен.
+>>>>>>> parent of ed123a1... Add localosation  (#15)
     shared:
       links:
         back: Назад

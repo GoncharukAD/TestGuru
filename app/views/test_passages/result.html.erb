@@ -1,10 +1,19 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
+<h1>The <%= @test_passage.test.title %> test was completed!</h1>
 
 <% if @test_passage.passed? %>
+<<<<<<< HEAD
   <p style="color: green"><%= @test_passage.result %></p>
   <p><%= t('.success') %></p>
+=======
+  <p style="color: green"><%= @test_passage.result %>%</p>
+  <p>Test was succesful!</p>
+>>>>>>> parent of ed123a1... Add localosation  (#15)
 <% else %>
   <p style="color: red"><%= @test_passage.result %></p>
   <p><%= t('.failed') %></p>
 <% end %>
+<<<<<<< HEAD
 <%= button_to t('.back'), root_path, method: :get  %>
+=======
+<%= link_to 'Back', tests_path %>
+>>>>>>> parent of ed123a1... Add localosation  (#15)
