@@ -9,7 +9,8 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import '../bootstrap_js_files.js'
 
-require("utilities/sorting")
+require("./sorting")
+require("./password_check")
 
 Rails.start()
 Turbolinks.start()
