@@ -1,14 +1,14 @@
-<div class="container">
+<div class="row justify-content-center w-100">
   <h1><%= t('.header')%></h1>
 
-  <table class="table">
+  <table class="table table-sm table-bordered" id="test_table">
     <tr>
-      <th class="sort-by-title pointer">
+      <th class="sort-by-title pointer align-middle text-center" scope="col">
       <%= t('.title') %>
         <%= octicon 'arrow-up', class: 'text-success hide'%>
         <%= octicon 'arrow-down', class: 'text-success hide'%>
       </th>
-      <th class="sort-by-title pointer">
+      <th class="sort-by-title pointer align-middle text-center" scope="col">
       <%= t('.level') %>
         <%= octicon 'arrow-up', class: 'text-success hide'%>
         <%= octicon 'arrow-down', class: 'text-success hide'%>
