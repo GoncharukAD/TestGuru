@@ -29,6 +29,7 @@ gem 'devise', '~> 4.0'
 #UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.2.2'
+gem 'octicons_helper'
 
 #Localization
 

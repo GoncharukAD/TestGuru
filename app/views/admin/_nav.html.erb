@@ -4,7 +4,7 @@
     <% if user_signed_in? %>
       <b><%= t('.welcome', name: current_user.first_name  )%>, <%= link_to t('.guru'), admin_tests_path %></b> |
       <button type="button" class="btn btn-outline-dark btn-sm">
-      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+        <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
       </button>
     <% else %>
       <%= link_to t('.login'), new_session_path(resource_name) %> |
