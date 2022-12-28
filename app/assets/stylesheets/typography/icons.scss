@@ -5,17 +5,14 @@
 }
 
 .valid{
-  form-group
   border: 2
   px solid green;
 }
 
 .invalid {
-  form-group
   border: 2px solid red;
 }
 
 .default {
-  form-group
   border: 2px solid black;
 }
