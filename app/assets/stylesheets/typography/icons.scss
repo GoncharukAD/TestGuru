@@ -4,10 +4,18 @@
   fill: currentColor;
 }
 
-.border-green {
-  border: 2px solid green;
+.valid{
+  form-group
+  border: 2
+  px solid green;
 }
 
-.border-red {
+.invalid {
+  form-group
   border: 2px solid red;
+}
+
+.default {
+  form-group
+  border: 2px solid black;
 }

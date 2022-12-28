@@ -17,32 +17,28 @@
 
       <p>
         <%= f.label :last_name %><br />
-      <%= f.text_field :last_name, required: true, class: "form-control", placeholder: t('.last_name_enter') %>
+        <%= f.text_field :last_name, required: true, class: "form-control", placeholder: t('.last_name_enter') %>
       </p>
 
-      <p>
+
+      <p class="">
         <%= f.label :password %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> characters minimum)</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "off", class: 'form-control',  id: "password" %>
-        <%= octicon 'check', class: 'text-success hide' %>
-        <%= octicon 'x', class: 'text-danger hide' %>
       </p>
-    </div>
 
-    <div class="check-confirm">
-      <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', id: "confirm_password" %>
-      <%= octicon 'check', class: 'text-success hide' %>
-      <%= octicon 'x', class: 'text-danger hide' %>
-    </div>
+      <p class="">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', id: "confirm_password" %>
+      </p>
 
-    <div class="actions">
-      <%= f.submit t('.sign_up'), class: "btn btn-primary" %>
+      <div class="actions">
+        <%= f.submit t('.sign_up'), class: "btn btn-primary" %>
+      </div>
+    <% end %>
+    <div class="mt-1">
+        <%= render "devise/shared/links" %>
     </div>
-  <% end %>
-  <div class="mt-1">
-      <%= render "devise/shared/links" %>
-  </div>
 </div>

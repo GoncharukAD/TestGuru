@@ -3,8 +3,6 @@ export class PasswordConfirmation {
     this.form = form
     this.password = form.elements.password
     this.confirm_password = form.elements.confirm_password
-
-    this.setup()
   }
 
   setup() {
@@ -16,17 +14,18 @@ export class PasswordConfirmation {
 
   checkPasswords() {
     if (this.password.value == this.confirm_password.value) {
-      this.password.style.borderColor = 'green'
-      this.confirm_password.style.borderColor = 'green'
+      this.password.className = "valid"
+      this.confirm_password.className = "valid"
+
     } else {
-      this.password.style.borderColor = 'red'
-      this.confirm_password.style.borderColor = 'red'
+      this.password.className = "invalid"
+      this.confirm_password.className = "invalid"
     }
   }
 
   resetDefaultStyle() {
-    this.password.style.borderColor = '#ced4da'
-    this.confirm_password.style.borderColor = '#ced4da'
+    this.password.className = "default"
+    this.confirm_password.className = "default"
   }
 
 }

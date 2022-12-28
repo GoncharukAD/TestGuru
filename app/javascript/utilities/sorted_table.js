@@ -8,8 +8,6 @@ export class SortedTable {
     this.arrowUp = this.selectedNode.querySelector('.octicon-arrow-up')
     this.arrowDown = this.selectedNode.querySelector('.octicon-arrow-down')
     this.column_name = column_name
-
-    this.setup()
   }
 
   setup() {
@@ -22,7 +20,7 @@ export class SortedTable {
 
   sortRowsByColumnName() {
     const ColumnPos = this.selectedNode.cellIndex
-    //select all table rows except the first one which is the header
+
     for (let i = 1; i < this.rows.length; i++) {
       this.sortedRows.push(this.rows[i])
     }
