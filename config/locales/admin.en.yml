@@ -1,4 +1,5 @@
-admin:
+en:
+  admin:
     tests:
       success_create: 'Test created successfully'
       success_update: 'Test successfully updated'

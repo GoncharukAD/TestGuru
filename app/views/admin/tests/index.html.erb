@@ -1,5 +1,6 @@
 <div class="row justify-content-center w-100">
   <h1><%= t('.header') %></h1>
+  <%= render 'shared/errors', resource: @test %>
   <table class="table table-sm table-bordered" id="admin_test_table">
     <tr>
       <th class="sort-by-title pointer align-middle text-center" scope="col">
