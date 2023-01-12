@@ -12,6 +12,7 @@ import '../bootstrap_js_files.js'
 require("sorting")
 require("password_check")
 require("utilities/form_inline")
+require("utilities/progress_bar")
 
 Rails.start()
 Turbolinks.start()

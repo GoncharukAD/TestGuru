@@ -69,6 +69,7 @@ ru:
       back: 'Назад'
       next: 'Далее'
       qist_question: "Сохранить вопрос в Gist"
+      passing: 'Прогресс'
 
   admin:
     questions:

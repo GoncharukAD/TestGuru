@@ -184,6 +184,7 @@ en:
         back: 'Back'
         next: 'Next'
         qist_question: "Save question in Gist"
+        passing: 'Progress'
 
     test_mailer:
     completed_test:
