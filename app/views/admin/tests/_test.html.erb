@@ -1,11 +1,17 @@
 <tr>
   <td class="align-middle">
-    <%= test.title %>
+    <%= content_tag :span, test.title, class: 'test-title', data: {test_id: test.id} %>
     <%= render 'form_inline', test: test == @test? @test : test %>
   </td>
   <td class="align-middle"><%= test_level(test) %></td>
-  <td class="align-middle"><%= button_to t('.edit'), edit_admin_test_path(test)%></td>
-  <td class="align-middle"><%= button_to t('.show'), admin_test_path(test)%></td>
+  <td class="align-middle">
+    <%= button_to t('.edit'),
+                  edit_admin_test_path(test),
+                  class: "form-inline-button",
+                  method: :get,
+                  data: { test_id: test.id} %>
+  </td>
+  <td class="align-middle"><%= button_to t('.show'), admin_test_path(test), method: :get %></td>
   <td class="align-middle">
     <%= button_to t('.delete'),
     admin_test_path(test.id),
