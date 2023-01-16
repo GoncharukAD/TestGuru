@@ -2,11 +2,11 @@
 
 <h2><%= t('.questions') %></h2>
 
-<%= link_to t('.new_question'), new_test_question_path(@test) %>
+<%= link_to t('.new_question'),  new_admin_test_question_path(@test) %>
 
 <ol>
   <%= render @test.questions %>
 </ol><br>
 
-<%= link_to t('.edit'), edit_test_path(@test) %>
-<%= link_to t('.back'), tests_path %>
+<%= link_to t('.edit'),  edit_admin_test_path(@test) %>
+<%= link_to t('.back'), admin_tests_path %>
