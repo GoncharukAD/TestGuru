@@ -1,8 +1,27 @@
-<small>
-  <p>
-  <%= link_to 'TestGuru', github_url('GoncharukAD','TestGuru') %> - это веб-приложение для создания, управления и выполнения тестов.
-  Учебный проект в онлайн-школе <%= link_to 'Thinknetica', 'http://thinknetica.com/' %>.
-  <%= github_url('GoncharukAD', '') %>.
-  <%= current_year %>.
-  </p>
-</small>
+<footer class="bg-light text-center text-lg-start">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="font-italic"> <%= t('.author_header') %> </h5>
+        <p>
+          <%= t('.author') %>
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+        <h5 class="font-italic"> <%= t('.links') %> </h5>
+         <p>
+          <%= github_url('GoncharukAD','TestGuru') %>
+        </p>
+        <p>
+          <a href="https://thinknetica.com" target=_blank> <%= t('.project') %> </a>
+        </p>
+        <p>
+          <%= link_to t('.contact'), feedback_index_path %>
+        </p>
+       </div>
+    </div>
+  </div>
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © <%= current_year %> Copyright: TestGuru
+  </div>
+</footer>
