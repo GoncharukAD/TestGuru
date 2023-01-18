@@ -15,8 +15,10 @@ en:
         title: 'Test title'
         level:  'Difficulty level'
         actions: 'Possible actions'
-        links:
-          new_test: 'Create New test'
+        new_test: 'Create New test'
+        gists: "Gists list"
+        badges: "Available badges list"
+
       form_inline:
         submit: 'Ok'
       show:
@@ -80,3 +82,33 @@ en:
       admin: 'TestGuru Admin Panel'
       welcome: 'Welcome, %{name} Guru |'
       logout: 'Logout'
+    gists:
+      index:
+        body: "Question body (first 25 characters)"
+        link: "Link (hashed)"
+        email: "User email"
+        delete: "Delete record"
+        header: "List of all created gists"
+        back: "Back to tests page"
+      gist:
+        delete_btn: "Delete"
+    badges:
+      index:
+        header: "Available badges list"
+        badge_name: "Badge name"
+        badge_image: "Badge image"
+        badge_rule: "Badge rule description"
+        actions: "Actions"
+        new_badge: "Create new badge"
+        back: "Back to tests page"
+      badge:
+        edit: "Edit"
+        delete: "Delete"
+      new:
+        header: "Create new badge"
+        back: "Back to badges list"
+      create:
+        success: "The badge was successfully created"
+      edit:
+        edit: "Editing badge %{badge}"
+        back: "Back to badges list"

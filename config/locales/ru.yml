@@ -13,11 +13,17 @@ ru:
       test:
         create: 'Cоздать тест'
         update: 'Обновить тест'
+      badge:
+        create: "Создать награду"
     label:
       test:
         title: 'Название'
         level: 'Уровень'
         category_id: 'Категория'
+      badge:
+        name: "Имя награды"
+        image_url: "Адрес изображения (ссылка)"
+        rule_id: "Правило получения"
     select:
       prompt: 'Выберите'
     application_helper:

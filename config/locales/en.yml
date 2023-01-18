@@ -39,11 +39,17 @@ en:
       test:
         create: 'Create New test'
         update: 'Update test'
+      badge:
+        create: "Create badge"
     label:
       test:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+      badge:
+        name: "Badge name"
+        image_url: "Image URL"
+        rule_id: "Rule to achieve"
     select:
       prompt: "Please select" #Это для категорий
     application_helper:
