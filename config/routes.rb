@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   resources :gists, only: %i[index create]
 
+  resources :feedback, only: %i[index create]
+
   resources :tests, only: :index  do
     member do
       post :start

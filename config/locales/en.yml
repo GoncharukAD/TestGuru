@@ -46,6 +46,8 @@ en:
         category_id: 'Category'
     select:
       prompt: "Please select" #Это для категорий
+    application_helper:
+      repo: "Git repository"
 
   shared:
     errors:
@@ -61,6 +63,12 @@ en:
       login: 'Log in'
       signup: 'Become a guru'
       admin: 'Open Admin Panel'
+    footer:
+      author: "Goncharuk Anton"
+      project: "This is an educational project in online school Thinknetica"
+      author_header: "Author"
+      links: "Links"
+      contact: "Contact us"
 
   tests:
     test:
@@ -185,6 +193,15 @@ en:
         next: 'Next'
         qist_question: "Save question in Gist"
         passing: 'Progress'
+
+    feedback:
+      index:
+        contact: "Contact us"
+        send: "Send"
+        back: "Back to tests page"
+        message: "Enter the message"
+      create:
+        success: "The message was sent successfully"
 
     test_mailer:
     completed_test:

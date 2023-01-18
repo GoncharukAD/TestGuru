@@ -20,6 +20,8 @@ ru:
         category_id: 'Категория'
     select:
       prompt: 'Выберите'
+    application_helper:
+      repo: "Гит репозиторий проекта"
 
     sessions:
       sign_in_message: "Вы успешно вошли"
@@ -41,6 +43,13 @@ ru:
       login: 'Авторизоваться'
       signup: 'Стать гуру'
       admin: 'Админ'
+    footer:
+      author: "Гончарук Антон"
+      project: "Учебный проект в рамках обучения Rails в онлайн школе Thinknetica"
+      author_header: "Автор"
+      links: "Ссылки"
+      contact: "Напишите нам"
+
 
   gists:
     create:
@@ -174,6 +183,15 @@ ru:
       logout: 'Выйти'
       user: 'Стать пользователем'
       guru: 'Гуру'
+
+  feedback:
+    index:
+      contact: "Напишите нам"
+      send: "Отправить"
+      back: "Назад на страницу с тестами"
+      message: "Введите сообщение"
+    create:
+      success: "Сообщение успешно отправлено"
 
 
 
