@@ -17,6 +17,7 @@ class TestPassage < ApplicationRecord
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
     self.current_question = next_question
+    mark_as_successfully_passed if self.passed?
     save!
   end
 
@@ -34,6 +35,10 @@ class TestPassage < ApplicationRecord
 
   def questions_number
     test.questions.count
+  end
+
+  def mark_as_successfully_passed
+    self.successfully_passed = true
   end
 
   private
