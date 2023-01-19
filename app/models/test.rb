@@ -13,9 +13,11 @@ class Test < ApplicationRecord
 
   validates :level, numericality: { greater_than_or_equal_to: 0 }
 
-  scope :easy, -> { where(level: 0..1) }
-  scope :medium, -> { where(level: 2..4) }
-  scope :high, -> { where(level: 5..Float::INFINITY) }
+  scope :easy_level, -> { where(level: 0) }
+  scope :elementary_level, -> { where(level: 1) }
+  scope :advanced_level, -> { where(level: 2) }
+  scope :hard_level, -> { where(level: 3) }
+  scope :hero_level, -> { where(level: 4..Float::INFINITY) }
 
   scope :tests_category, lambda { |category_title|
                            joins(:category).where(categories: { title: category_title }).order(title: :desc)

@@ -1,0 +1,25 @@
+<div class="card border-primary">
+  <div class="card-body">
+    <%= form_with model: [:admin, @badge], local: true do |form| %>
+      <div class="form-group">
+        <%= render "shared/errors", resource: @badge %>
+        <p>
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control" %>
+        </p>
+        <br>
+        <p>
+          <%= form.label :image_url %>
+          <%= form.text_field :image_url, class: "form-control" %>
+        </p>
+        <br>
+        <p>
+          <%= form.label :rule_id %>
+          <br>
+          <%= form.collection_select :rule_id, BadgeRule.all, :id, :name, prompt: true %>
+        </p>
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div>
+</div>
