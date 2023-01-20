@@ -13,6 +13,10 @@
         <%= octicon 'arrow-up', class: 'text-success hide' %>
         <%= octicon 'arrow-down', class: 'text-success hide' %>
         </th>
+      <th class="align-middle text-center"> <%= t('.category') %> </th>
+      <th class="align-middle text-center"> <%= t('.author') %> </th>
+      <th class="align-middle text-center"> <%= t('.questions_num') %> </th>
+      <th class="align-middle text-center"> <%= t('.passing_time') %> </th>
       <th colspan="4"><%= t('.actions') %></th>
     </tr>
     <%= render @tests %><br>

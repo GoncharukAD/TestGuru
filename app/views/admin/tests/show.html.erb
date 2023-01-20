@@ -1,12 +1,43 @@
-<h1><%= t('.header', title: @test.title) %></h1>
-
-<h2><%= t('.questions') %></h2>
-
-<%= link_to t('.new_question'),  new_admin_test_question_path(@test) %>
-
-<ol>
-  <%= render @test.questions %>
-</ol><br>
-
-<%= link_to t('.edit'),  edit_admin_test_path(@test) %>
-<%= link_to t('.back'), admin_tests_path %>
+<table class="table table-bordered">
+  <tr class="thead-dark">
+    <th> <%= t('.title')%> </th>
+    <th> <%= t('.level')%> </th>
+    <th> <%= t('.category')%> </th>
+    <th> <%= t('.author')%> </th>
+    <th> <%= t('.passing_time') %> </th>
+  </tr>
+  <tr>
+    <th> <%= @test.title %> </th>
+    <th> <%= test_level(@test) %> </th>
+    <th> <%= @test.category.title %> </th>
+    <th> <%= @test.author.email %> </th>
+    <th>
+      <% if @test.passing_time.present? %>
+        <%= @test.passing_time %>
+      <% else %>
+        &#8734
+      <% end %>
+    </th>
+  </tr>
+</table>
+<br>
+ <h2><%= render @test.questions %> </h2>
+<table class="table table-bordered">
+  <% if @test.questions.present? %>
+    <%= render @test.questions %>
+  <% else %>
+    <p> No questions for this test yet </p>
+  <% end %>
+</table>
+<br>
+<table class="table table-borderless" >
+  <tr>
+    <td> <%= button_to t('.create_new_question'), new_admin_test_question_path(@test), class: 'btn btn-primary' %> </td>
+  </tr>
+  <tr>
+    <td> <%= button_to t('.edit'),  edit_admin_test_path(@test) %> </td>
+  </tr>
+  <tr>
+    <td><%= button_to t('.back'), admin_tests_path %></td>
+  </tr>
+</table>

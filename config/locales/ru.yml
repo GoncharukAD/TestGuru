@@ -67,10 +67,18 @@ ru:
     test:
       start: 'Пройти тест'
     index:
-      header: 'Доступные тесты'
-      title: 'Название'
-      level:  'Уровень'
-      questions_count: 'Количество вопросов'
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Уровень"
+      category: "Категория"
+      author: "Автор"
+      questions_num: "Количество вопросов"
+      actions: "Действия"
+      create_new_test: "Создать новый тест"
+      admin_panel: "TestGuru Admin Panel"
+      gists: "Список gists"
+      badges: "Список доступных наград"
+      passing_time: "Время (мин)"
 
 
   test_passages:

@@ -1,9 +1,19 @@
 <tr>
-  <td class="align-middle">
+  <td class="align-middle text-center">
     <%= content_tag :span, test.title, class: 'test-title', data: {test_id: test.id} %>
-    <%= render 'form_inline', test: test == @test? @test : test %>
+    <%= render 'form_inline', test: test == @test ? @test : test %>
   </td>
-  <td class="align-middle"><%= test_level(test) %></td>
+  <td class="align-middle text-center"> <%= test_level(test) %> </td>
+  <td class="align-middle text-center"> <%= test.category.title %> </td>
+  <td class="align-middle text-center"> <%= test.author.email %> </td>
+  <td class="align-middle text-center"> <%= test.questions.size %> </td>
+  <td class="align-middle text-center">
+    <% if test.passing_time.present? %>
+      <%= test.passing_time %>
+    <% else %>
+      &#8734
+    <% end %>
+  </td>
   <td class="align-middle">
     <%= button_to t('.edit'),
                   edit_admin_test_path(test),
