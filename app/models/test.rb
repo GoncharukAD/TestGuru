@@ -26,4 +26,8 @@ class Test < ApplicationRecord
   def self.array_tests_category(category_title)
     tests_category(category_title).pluck(:title)
   end
+
+  def http_end_time
+    (Time.now + self.passing_time.minutes).httpdate unless self.passing_time.nil?
+  end
 end

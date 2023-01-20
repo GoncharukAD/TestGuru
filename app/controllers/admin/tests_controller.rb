@@ -14,7 +14,9 @@ class Admin::TestsController < Admin::BaseController
     @test.update ? (redirect_to [:admin, @test], notice: t('.success_update')) : (render :edit)
   end
 
-  def show; end
+  def show
+    redirect_to result_test_passage_path(@test_passage) if @test_passage.closed
+  end
 
   def destroy
     @test.destroy
@@ -51,7 +53,7 @@ class Admin::TestsController < Admin::BaseController
   def test_params
     params
       .require(:test)
-      .permit(:title, :level, :category_id)
+      .permit(:title, :level, :category_id, :passing_time)
   end
 
   def set_test

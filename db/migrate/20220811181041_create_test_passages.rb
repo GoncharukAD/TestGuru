@@ -8,6 +8,8 @@ class CreateTestPassages < ActiveRecord::Migration[6.1]
       t.references :current_question, foreign_key: { to_table: :questions }
       t.integer :correct_questions, default: 0
       t.boolean :sucessfully_passed, default: false
+      t.string :remaining_time, null: true
+      t.boolean :closed, default: false
 
       t.timestamps
     end

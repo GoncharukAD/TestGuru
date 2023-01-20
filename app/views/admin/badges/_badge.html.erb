@@ -2,4 +2,14 @@
   <td class="align-middle text-center"> <%= badge.name %> </td>
   <td class="align-middle text-center"> <%= image_tag badge.image_url, class: "badge-image" %> </td>
   <td class="align-middle text-center"> <%= badge.rule.name %> </td>
+  <td class="edit_question_field align-middle text-center">
+    <%= link_to edit_admin_badge_path(badge), class: "btn btn-success", data: { badge_id: badge.id} do %>
+      <i class="bi bi-pencil-square"> <%= t('.edit') %> </i>
+    <% end %>
+  </td>
+  <td class="delete_question_field align-middle text-center">
+    <%= link_to admin_badge_path(badge), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" do %>
+      <i class="bi bi-trash"> <%= t('.delete') %> </i>
+    <% end %>
+  </td>
 </tr>
