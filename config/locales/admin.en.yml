@@ -11,22 +11,32 @@ en:
         edit: 'Edit'
         confirm: 'Are you sure?'
       index:
-        header: 'All tests'
-        title: 'Test title'
-        level:  'Difficulty level'
-        actions: 'Possible actions'
-        new_test: 'Create New test'
+        header: "Available tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        author: "Author"
+        questions_num: "Number of questions"
+        actions: "Actions"
+        create_new_test: "Create new test"
         gists: "Gists list"
         badges: "Available badges list"
+        passing_time: "Time (min)"
 
       form_inline:
         submit: 'Ok'
       show:
-        header: '%{title} Test'
-        questions: 'All questions'
-        back: 'Back'
-        edit: 'Edit'
-        new_question: 'Add new question'
+        title: "Test Title:"
+        level: "Test Level:"
+        category: "Test Category:"
+        author: "Test Author:"
+        questions: "Test questions list:"
+        body: "Body"
+        actions: "Actions"
+        create_new_question: "Create new question"
+        edit: "Edit test"
+        back: "Back to tests page"
+        passing_time: "Time (min)
       new:
         new_test: 'Create new test'
       edit:

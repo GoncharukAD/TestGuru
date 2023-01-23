@@ -9,6 +9,12 @@
     </div>
     <%= content_tag :p, "0 %", class: "progress-bar-value", data: { current_question_num: @test_passage.current_question_number, questions_num: @test_passage.test.questions.size} %>
   </div>
+  <br>
+  <% if @test_passage.test.passing_time.present? %>
+    <div id="timer_bar">
+      <%= content_tag :p, "", class: "timer-bar-value hide", data: { end_time: @test_passage.remaining_time, test_passage_id: @test_passage.id} %>
+    </div>
+  <% end %>
 </center>
 <br>
   <p class="text-start fw-bold fs-5">
@@ -19,7 +25,7 @@
     <%= @test_passage.current_question_number %>/<%= @test_passage.questions_number  %>
   </p>
 
-  <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
+  <%= form_with url: test_passage_path(@test_passage), local: true, method: :put, html: { id: "choose_answers_form"} do |form|%>
     <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :title, include_hidden: false do |b| %>
       <p>
         <%= b.check_box id: "answer_ids_#{b.object_id}" %>

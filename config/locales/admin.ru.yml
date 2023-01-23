@@ -11,19 +11,30 @@ ru:
         edit: 'Редактировать'
         confirm: 'Вы уверены?'
       index:
-        header: 'Доступные тесты'
-        title: 'Название'
-        level:  'Уровень'
-        actions: 'Доступные действия'
-        new_test: 'Создать новый тест'
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Уровень"
+        category: "Категория"
+        author: "Автор"
+        questions_num: "Количество вопросов"
+        actions: "Действия"
+        create_new_test: "Создать новый тест"
+        admin_panel: "TestGuru Admin Panel"
         gists: "Список gists"
         badges: "Список доступных наград"
+        passing_time: "Время (мин)"
       show:
-        header: '%{title} Тест'
-        questions: 'Все вопросы'
-        back: 'Назад'
-        edit: 'Редактировать'
-        new_question: 'Добавить новый вопрос'
+        title: "Название теста:"
+        level: "Уровень теста:"
+        category: "Категория теста:"
+        author: "Автор теста:"
+        questions: "Список вопросов теста:"
+        body: "Вопрос"
+        actions: "Список действий"
+        create_new_question: "Создать новый вопрос"
+        edit: "Редактировать тест"
+        back: "Назад на страницу с тестами"
+        passing_time: "Время (мин)"
       new:
         new_test: 'Создать новый тест'
       edit:

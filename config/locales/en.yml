@@ -46,6 +46,7 @@ en:
         title: 'Title'
         level: 'Level'
         category_id: 'Category'
+        passing_time: "Time (min)"
       badge:
         name: "Badge name"
         image_url: "Image URL"
@@ -80,10 +81,17 @@ en:
     test:
       start: 'Start Test'
     index:
-      header: 'All tests'
-      title: 'Test title'
-      level:  'Difficulty level'
-      questions_count: 'Number of questions'
+        header: "Available tests"
+        title: "Title"
+        level: "Level"
+        category: "Category"
+        author: "Author"
+        questions_num: "Number of questions"
+        actions: "Actions"
+        create_new_test: "Create new test"
+        gists: "Gists list"
+        badges: "Available badges list"
+        passing_time: "Time (min)"
 
   gists:
     create:

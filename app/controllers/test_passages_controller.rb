@@ -9,8 +9,10 @@ class TestPassagesController < ApplicationController
   def result; end
 
   def update
+    @test_passage.check_lefted_time if @test_passage.test.passing_time.present?
     @test_passage.accept!(params[:answer_ids])
-    if @test_passage.completed?
+
+    if @test_passage.closed
       TestsMailer.completed_test(@test_passage).deliver_now
       received_badges = BadgeDepartmentService.new(current_user, @test_passage).call
       flash[:notice] = t(".success") if received_badges.present?
