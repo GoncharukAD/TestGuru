@@ -13,6 +13,7 @@ class TestPassage < ApplicationRecord
 
   def completed?
     current_question.nil?
+    self.closed?
   end
 
   def accept!(answer_ids)
@@ -69,7 +70,6 @@ class TestPassage < ApplicationRecord
 
   def before_update_set_next_question
     self.current_question = test.questions.order(:id).where("id > ?", current_question.id).first
-    self.closed = completed?
   end
 
   def set_remaining_time
